@@ -108,15 +108,9 @@
             "heading": "Join the New Zealand Waitlist",
             "heading_size": "h2"
           }
-        },
-        "paragraph": {
-          "type": "paragraph",
-          "settings": {
-            "text": "Be first to shop our limited first release."
-          }
         }
       },
-      "block_order": ["heading", "paragraph"],
+      "block_order": ["heading"],
       "settings": {
         "color_scheme": "background-2",
         "padding_top": 80,
