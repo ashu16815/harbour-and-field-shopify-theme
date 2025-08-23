@@ -1,1 +1,315 @@
-{"sections":{"slideshow_LeJEXR":{"type":"slideshow","blocks":{"slide_3Qw3QK":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/mens-dress-wear-natural-5-top.jpg","heading":"Refined Style for Professionals","heading_size":"h1","subheading":"Experience luxe menswear that exudes confidence and professionalism.","button_label":"Shop now","link":"shopify:\/\/collections\/all","button_style_secondary":false,"box_align":"bottom-left","show_text_box":true,"text_alignment":"left","image_overlay_opacity":0,"color_scheme":"accent-1","text_alignment_mobile":"center"}}},"block_order":["slide_3Qw3QK"],"settings":{"layout":"full_bleed","slide_height":"large","slider_visual":"counter","auto_rotate":false,"change_slides_speed":5,"image_behavior":"none","show_text_below":true,"accessibility_info":"Slideshow about our brand"}},"multicolumn_cNQVgy":{"type":"multicolumn","blocks":{"column_ztmnLY":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/mens-dress-wear-natural-1-top.jpg","title":"In the quiet of dawn, whispers of ambition dance on the breeze, painting the world anew.","text":"","link_label":"Explore","link":"shopify:\/\/collections\/all"}},"column_9fWRqw":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/mens-dress-wear-natural-3-top.jpg","title":"We curate a sophisticated collection of minimalist menswear, designed for the modern professional who values both elegance and simplicity.","text":"","link_label":"Get in touch","link":"shopify:\/\/pages\/contact"}}},"block_order":["column_ztmnLY","column_9fWRqw"],"settings":{"title":"Trending now","heading_size":"h1","image_width":"full","image_ratio":"adapt","columns_desktop":2,"column_alignment":"left","background_style":"primary","button_label":"","button_link":"","color_scheme":"background-1","columns_mobile":"1","swipe_on_mobile":false,"padding_top":72,"padding_bottom":36}},"featured_collection":{"type":"featured-collection","custom_css":[],"settings":{"title":"Featured collection","heading_size":"h1","description":"","show_description":false,"description_style":"body","collection":"all","products_to_show":15,"columns_desktop":3,"full_width":false,"show_view_all":false,"view_all_style":"solid","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"portrait","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"1","swipe_on_mobile":false,"padding_top":56,"padding_bottom":0}},"rich_text_MTeLtk":{"type":"rich-text","blocks":{"heading_TChPCC":{"type":"heading","settings":{"heading":"Our commitment to quality and minimalist design empowers you to present your best self in any business setting.","heading_size":"h1"}},"button_aFhHzf":{"type":"button","settings":{"button_label":"","button_link":"shopify:\/\/pages\/contact","button_style_secondary":false,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading_TChPCC","button_aFhHzf"],"settings":{"desktop_content_position":"center","content_alignment":"left","color_scheme":"background-1","full_width":true,"padding_top":68,"padding_bottom":100}}},"order":["slideshow_LeJEXR","multicolumn_cNQVgy","featured_collection","rich_text_MTeLtk"]}
+{
+  "sections": {
+    "announcement_bar": {
+      "type": "announcement-bar",
+      "settings": {
+        "text": "Landing in New Zealand for the first time — limited first release.",
+        "link": "#newsletter",
+        "link_text": "Join the waitlist",
+        "color_scheme": "background-2"
+      }
+    },
+    "hero": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Premium Menswear. Surprisingly Attainable.",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>New Zealand First Release</strong><br>Order now — we'll ship as soon as stock arrives.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop New Arrivals",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false
+          }
+        },
+        "button_2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Join Waitlist",
+            "button_link": "#newsletter",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button", "button_2"],
+      "settings": {
+        "height": "large",
+        "desktop_image_focus": "center center",
+        "color_scheme": "background-2",
+        "overlay_opacity": 25,
+        "show_text_box": true,
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "image": "shopify://shop_images/mens-dress-wear-natural-5-top.jpg"
+      }
+    },
+    "value_props": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_1": {
+          "type": "column",
+          "settings": {
+            "title": "Premium Quality",
+            "text": "Natural fibres, refined construction, enduring comfort.",
+            "link_label": "",
+            "link": "",
+            "image": "shopify://shop_images/mens-dress-wear-natural-1-top.jpg"
+          }
+        },
+        "column_2": {
+          "type": "column",
+          "settings": {
+            "title": "Attainable Prices",
+            "text": "Luxury design without the luxury markup.",
+            "link_label": "",
+            "link": "",
+            "image": "shopify://shop_images/mens-dress-wear-natural-3-top.jpg"
+          }
+        },
+        "column_3": {
+          "type": "column",
+          "settings": {
+            "title": "NZ Launch",
+            "text": "Order now — we'll ship as soon as stock lands.",
+            "link_label": "",
+            "link": "",
+            "image": "shopify://shop_images/mens-dress-wear-natural-5-top.jpg"
+          }
+        }
+      },
+      "block_order": ["column_1", "column_2", "column_3"],
+      "settings": {
+        "title": "Why Harbour & Field",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "accent-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "collection_tiles": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_1": {
+          "type": "collection",
+          "settings": {
+            "collection": "new-arrivals",
+            "title": "New Arrivals",
+            "button_label": "Shop New"
+          }
+        },
+        "collection_2": {
+          "type": "collection",
+          "settings": {
+            "collection": "essentials",
+            "title": "Essentials",
+            "button_label": "Shop Essentials"
+          }
+        },
+        "collection_3": {
+          "type": "collection",
+          "settings": {
+            "collection": "shirts",
+            "title": "Tailored Shirts",
+            "button_label": "Shop Shirts"
+          }
+        }
+      },
+      "block_order": ["collection_1", "collection_2", "collection_3"],
+      "settings": {
+        "title": "Shop by Collection",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "accent-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Editor's Picks",
+        "heading_size": "h2",
+        "collection": "new-arrivals",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "accent-1",
+        "image_ratio": "portrait",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "swipe_on_mobile": false,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "brand_story": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Refined Style for Professionals",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We curate minimalist menswear for the modern professional — premium quality with attainable prices. Each piece is designed to elevate your presence at work and beyond.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Discover the Collection",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "preorder_note": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Pre-Order with Confidence",
+            "heading_size": "h3"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Reserve your size today. We'll ship as soon as stock arrives in New Zealand. You'll receive updates and an estimated shipping window via email.</p>"
+          }
+        }
+      },
+      "block_order": ["heading", "text"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "testimonials": {
+      "type": "multicolumn",
+      "blocks": {
+        "testimonial_1": {
+          "type": "column",
+          "settings": {
+            "title": "Exceptional fit and finish.",
+            "text": "— James R.",
+            "link_label": "",
+            "link": "",
+            "image": ""
+          }
+        },
+        "testimonial_2": {
+          "type": "column",
+          "settings": {
+            "title": "Premium feel at a fair price.",
+            "text": "— Luca M.",
+            "link_label": "",
+            "link": "",
+            "image": ""
+          }
+        }
+      },
+      "block_order": ["testimonial_1", "testimonial_2"],
+      "settings": {
+        "title": "What Customers Say",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join the New Zealand Waitlist",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Be first to shop our limited first release.</p>"
+          }
+        }
+      },
+      "block_order": ["heading", "text"],
+      "settings": {
+        "color_scheme": "background-2",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "heading_alignment": "center",
+        "text_alignment": "center",
+        "form_alignment": "center",
+        "button_label": "Join Waitlist",
+        "placeholder": "Enter your email",
+        "success_message": "You're on the list — we'll email you as soon as stock lands in NZ."
+      }
+    }
+  },
+  "order": [
+    "announcement_bar",
+    "hero",
+    "value_props",
+    "collection_tiles",
+    "featured_collection",
+    "brand_story",
+    "preorder_note",
+    "testimonials",
+    "newsletter"
+  ]
+}
