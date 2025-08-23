@@ -13,7 +13,8 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>New Zealand First Release</strong><br>Order now — we'll ship as soon as stock arrives.</p>"
+            "text": "New Zealand First Release. Order now — we'll ship as soon as stock arrives.",
+            "text_style": "subtitle"
           }
         },
         "buttons": {
