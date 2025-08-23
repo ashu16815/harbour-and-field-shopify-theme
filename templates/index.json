@@ -149,42 +149,32 @@
         "padding_bottom": 80
       }
     },
-    "image_with_text": {
-      "type": "image-with-text",
+    "brand_story": {
+      "type": "multicolumn",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "column_1": {
+          "type": "column",
           "settings": {
-            "heading": "Refined Style for Professionals",
-            "heading_size": "h2"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
+            "title": "Refined Style for Professionals",
             "text": "We curate minimalist menswear for the modern professional — premium quality with attainable prices. Each piece is designed to elevate your presence at work and beyond.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "button_label": "Discover the Collection",
-            "button_link": "shopify://collections/all",
-            "button_style_secondary": false
+            "link_label": "Discover the Collection",
+            "link": "shopify://collections/all",
+            "image": "shopify://shop_images/mens-dress-wear-natural-3-top.jpg"
           }
         }
       },
-      "block_order": ["heading", "text", "button"],
+      "block_order": ["column_1"],
       "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "center",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 1,
+        "column_alignment": "center",
+        "background_style": "primary",
         "color_scheme": "accent-1",
-        "image": "shopify://shop_images/mens-dress-wear-natural-3-top.jpg",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 80,
         "padding_bottom": 80
       }
@@ -225,7 +215,7 @@
     "value_props",
     "featured_collection",
     "collection_tiles",
-    "image_with_text",
+    "brand_story",
     "newsletter"
   ]
 }
