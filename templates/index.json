@@ -49,8 +49,8 @@
           "settings": {
             "title": "Premium Quality",
             "text": "Natural fibres, refined construction, enduring comfort.",
-            "link_label": "",
-            "link": "",
+            "link_label": "Learn More",
+            "link": "shopify://collections/all",
             "image": "shopify://shop_images/mens-dress-wear-natural-1-top.jpg"
           }
         },
@@ -59,8 +59,8 @@
           "settings": {
             "title": "Attainable Prices",
             "text": "Luxury design without the luxury markup.",
-            "link_label": "",
-            "link": "",
+            "link_label": "View Pricing",
+            "link": "shopify://collections/all",
             "image": "shopify://shop_images/mens-dress-wear-natural-3-top.jpg"
           }
         },
@@ -69,8 +69,8 @@
           "settings": {
             "title": "NZ Launch",
             "text": "Order now — we'll ship as soon as stock lands.",
-            "link_label": "",
-            "link": "",
+            "link_label": "Pre-Order",
+            "link": "#newsletter",
             "image": "shopify://shop_images/mens-dress-wear-natural-5-top.jpg"
           }
         }
@@ -86,6 +86,29 @@
         "background_style": "primary",
         "color_scheme": "accent-1",
         "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Editor's Picks",
+        "heading_size": "h2",
+        "collection": "new-arrivals",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "accent-1",
+        "image_ratio": "portrait",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
         "swipe_on_mobile": false,
         "padding_top": 80,
         "padding_bottom": 80
@@ -126,31 +149,8 @@
         "padding_bottom": 80
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Editor's Picks",
-        "heading_size": "h2",
-        "collection": "new-arrivals",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "columns_mobile": "2",
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "accent-1",
-        "image_ratio": "portrait",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "swipe_on_mobile": false,
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
-    },
-    "brand_story": {
-      "type": "rich-text",
+    "image_with_text": {
+      "type": "image-with-text",
       "blocks": {
         "heading": {
           "type": "heading",
@@ -162,7 +162,8 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>We curate minimalist menswear for the modern professional — premium quality with attainable prices. Each piece is designed to elevate your presence at work and beyond.</p>"
+            "text": "We curate minimalist menswear for the modern professional — premium quality with attainable prices. Each piece is designed to elevate your presence at work and beyond.",
+            "text_style": "body"
           }
         },
         "button": {
@@ -176,77 +177,14 @@
       },
       "block_order": ["heading", "text", "button"],
       "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
         "desktop_content_position": "center",
-        "content_alignment": "center",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
         "color_scheme": "accent-1",
-        "full_width": true,
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
-    },
-    "preorder_note": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Pre-Order with Confidence",
-            "heading_size": "h3"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Reserve your size today. We'll ship as soon as stock arrives in New Zealand. You'll receive updates and an estimated shipping window via email.</p>"
-          }
-        }
-      },
-      "block_order": ["heading", "text"],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "testimonials": {
-      "type": "multicolumn",
-      "blocks": {
-        "testimonial_1": {
-          "type": "column",
-          "settings": {
-            "title": "Exceptional fit and finish.",
-            "text": "— James R.",
-            "link_label": "",
-            "link": "",
-            "image": ""
-          }
-        },
-        "testimonial_2": {
-          "type": "column",
-          "settings": {
-            "title": "Premium feel at a fair price.",
-            "text": "— Luca M.",
-            "link_label": "",
-            "link": "",
-            "image": ""
-          }
-        }
-      },
-      "block_order": ["testimonial_1", "testimonial_2"],
-      "settings": {
-        "title": "What Customers Say",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "image": "shopify://shop_images/mens-dress-wear-natural-3-top.jpg",
         "padding_top": 80,
         "padding_bottom": 80
       }
@@ -264,7 +202,7 @@
         "paragraph": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Be first to shop our limited first release.</p>"
+            "text": "Be first to shop our limited first release."
           }
         }
       },
@@ -285,11 +223,9 @@
   "order": [
     "hero",
     "value_props",
-    "collection_tiles",
     "featured_collection",
-    "brand_story",
-    "preorder_note",
-    "testimonials",
+    "collection_tiles",
+    "image_with_text",
     "newsletter"
   ]
 }
