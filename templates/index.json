@@ -261,14 +261,14 @@
             "heading_size": "h2"
           }
         },
-        "text": {
-          "type": "text",
+        "paragraph": {
+          "type": "paragraph",
           "settings": {
             "text": "<p>Be first to shop our limited first release.</p>"
           }
         }
       },
-      "block_order": ["heading", "text"],
+      "block_order": ["heading", "paragraph"],
       "settings": {
         "color_scheme": "background-2",
         "padding_top": 80,
