@@ -41,56 +41,6 @@
         "image": "shopify://shop_images/mens-dress-wear-natural-5-top.jpg"
       }
     },
-    "value_props": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_1": {
-          "type": "column",
-          "settings": {
-            "title": "Premium Quality",
-            "text": "Natural fibres, refined construction, enduring comfort.",
-            "link_label": "Learn More",
-            "link": "shopify://collections/all",
-            "image": "shopify://shop_images/mens-dress-wear-natural-1-top.jpg"
-          }
-        },
-        "column_2": {
-          "type": "column",
-          "settings": {
-            "title": "Attainable Prices",
-            "text": "Luxury design without the luxury markup.",
-            "link_label": "View Pricing",
-            "link": "shopify://collections/all",
-            "image": "shopify://shop_images/mens-dress-wear-natural-3-top.jpg"
-          }
-        },
-        "column_3": {
-          "type": "column",
-          "settings": {
-            "title": "NZ Launch",
-            "text": "Order now — we'll ship as soon as stock lands.",
-            "link_label": "Pre-Order",
-            "link": "#newsletter",
-            "image": "shopify://shop_images/mens-dress-wear-natural-5-top.jpg"
-          }
-        }
-      },
-      "block_order": ["column_1", "column_2", "column_3"],
-      "settings": {
-        "title": "Why Harbour & Field",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "color_scheme": "accent-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
-    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -149,36 +99,6 @@
         "padding_bottom": 80
       }
     },
-    "brand_story": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_1": {
-          "type": "column",
-          "settings": {
-            "title": "Refined Style for Professionals",
-            "text": "We curate minimalist menswear for the modern professional — premium quality with attainable prices. Each piece is designed to elevate your presence at work and beyond.",
-            "link_label": "Discover the Collection",
-            "link": "shopify://collections/all",
-            "image": "shopify://shop_images/mens-dress-wear-natural-3-top.jpg"
-          }
-        }
-      },
-      "block_order": ["column_1"],
-      "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 1,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "color_scheme": "accent-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
-    },
     "newsletter": {
       "type": "newsletter",
       "blocks": {
@@ -212,10 +132,8 @@
   },
   "order": [
     "hero",
-    "value_props",
     "featured_collection",
     "collection_tiles",
-    "brand_story",
     "newsletter"
   ]
 }
