@@ -162,7 +162,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "We curate minimalist menswear for the modern professional — premium quality with attainable prices. Each piece is designed to elevate your presence at work and beyond."
+            "text": "<p>We curate minimalist menswear for the modern professional — premium quality with attainable prices. Each piece is designed to elevate your presence at work and beyond.</p>"
           }
         },
         "button": {
@@ -197,7 +197,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "Reserve your size today. We'll ship as soon as stock arrives in New Zealand. You'll receive updates and an estimated shipping window via email."
+            "text": "<p>Reserve your size today. We'll ship as soon as stock arrives in New Zealand. You'll receive updates and an estimated shipping window via email.</p>"
           }
         }
       },
@@ -264,7 +264,7 @@
         "paragraph": {
           "type": "paragraph",
           "settings": {
-            "text": "Be first to shop our limited first release."
+            "text": "<p>Be first to shop our limited first release.</p>"
           }
         }
       },
