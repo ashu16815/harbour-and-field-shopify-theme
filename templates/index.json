@@ -1,14 +1,5 @@
 {
   "sections": {
-    "announcement_bar": {
-      "type": "announcement-bar",
-      "settings": {
-        "text": "Landing in New Zealand for the first time — limited first release.",
-        "link": "#newsletter",
-        "link_text": "Join the waitlist",
-        "color_scheme": "background-2"
-      }
-    },
     "hero": {
       "type": "image-banner",
       "blocks": {
@@ -25,24 +16,19 @@
             "text": "<p><strong>New Zealand First Release</strong><br>Order now — we'll ship as soon as stock arrives.</p>"
           }
         },
-        "button": {
-          "type": "button",
+        "buttons": {
+          "type": "buttons",
           "settings": {
-            "button_label": "Shop New Arrivals",
-            "button_link": "shopify://collections/all",
-            "button_style_secondary": false
-          }
-        },
-        "button_2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Join Waitlist",
-            "button_link": "#newsletter",
-            "button_style_secondary": true
+            "button_label_1": "Shop New Arrivals",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "Join Waitlist",
+            "button_link_2": "#newsletter",
+            "button_style_secondary_2": true
           }
         }
       },
-      "block_order": ["heading", "text", "button", "button_2"],
+      "block_order": ["heading", "text", "buttons"],
       "settings": {
         "height": "large",
         "desktop_image_focus": "center center",
@@ -108,27 +94,21 @@
       "type": "collection-list",
       "blocks": {
         "collection_1": {
-          "type": "collection",
+          "type": "featured_collection",
           "settings": {
-            "collection": "new-arrivals",
-            "title": "New Arrivals",
-            "button_label": "Shop New"
+            "collection": "new-arrivals"
           }
         },
         "collection_2": {
-          "type": "collection",
+          "type": "featured_collection",
           "settings": {
-            "collection": "essentials",
-            "title": "Essentials",
-            "button_label": "Shop Essentials"
+            "collection": "essentials"
           }
         },
         "collection_3": {
-          "type": "collection",
+          "type": "featured_collection",
           "settings": {
-            "collection": "shirts",
-            "title": "Tailored Shirts",
-            "button_label": "Shop Shirts"
+            "collection": "shirts"
           }
         }
       },
@@ -153,7 +133,7 @@
         "collection": "new-arrivals",
         "products_to_show": 8,
         "columns_desktop": 4,
-        "columns_mobile": 2,
+        "columns_mobile": "2",
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
@@ -302,7 +282,6 @@
     }
   },
   "order": [
-    "announcement_bar",
     "hero",
     "value_props",
     "collection_tiles",
