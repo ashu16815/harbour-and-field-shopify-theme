@@ -205,6 +205,11 @@
             {%- endif -%}
 
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+            
+            <!-- Harbour & Field Enhancements -->
+            {% render 'reviews-summary', product: card_product, show_reviews: true %}
+            {% render 'preorder-badge', product: card_product %}
+            
             {%- if card_product.quantity_price_breaks_configured? -%}
               {% if card_product.variants_count == 1 and quick_add == 'bulk' %}
                 {% liquid
@@ -388,6 +393,10 @@
               </product-form>
             {%- endif -%}
           </div>
+          
+          <!-- Harbour & Field Wishlist Button -->
+          {% render 'hf-wishlist', product: card_product, show_wishlist: true %}
+          
         {% elsif quick_add == 'bulk' %}
           {% if card_product.variants_count == 1 %}
             <quick-add-bulk
@@ -548,6 +557,12 @@
             </div>
           {% endif %}
         {% endif %}
+        
+        <!-- Harbour & Field Wishlist Button for bulk quick add -->
+        {% if quick_add == 'bulk' %}
+          {% render 'hf-wishlist', product: card_product, show_wishlist: true %}
+        {% endif %}
+        
         <div class="card__badge {{ settings.badge_position }}">
           {%- if card_product.available == false -%}
             <span
@@ -556,6 +571,8 @@
             >
               {{- 'products.product.sold_out' | t -}}
             </span>
+            <!-- Harbour & Field Back-in-Stock Button -->
+            {% render 'hf-bis', product: card_product, show_bis: true %}
           {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
             <span
               id="Badge-{{ section_id }}-{{ card_product.id }}"

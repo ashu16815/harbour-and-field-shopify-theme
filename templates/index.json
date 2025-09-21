@@ -6,7 +6,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "{{ settings.hf_tagline | default: 'Premium Menswear. Surprisingly Attainable.' }}",
+            "heading": "Premium Menswear. Surprisingly Attainable.",
             "heading_size": "h1"
           }
         },
