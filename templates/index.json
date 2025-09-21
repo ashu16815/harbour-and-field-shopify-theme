@@ -64,36 +64,24 @@
         "padding_bottom": 80
       }
     },
-    "collection_tiles": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "all"
-          }
-        },
-        "collection_2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "all"
-          }
-        },
-        "collection_3": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "all"
-          }
-        }
-      },
-      "block_order": ["collection_1", "collection_2", "collection_3"],
+    "featured_collection_2": {
+      "type": "featured-collection",
       "settings": {
-        "title": "Shop by Collection",
+        "title": "Featured Products",
         "heading_size": "h2",
-        "image_ratio": "square",
+        "collection": "all",
+        "products_to_show": 6,
         "columns_desktop": 3,
+        "columns_mobile": "2",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
         "color_scheme": "accent-1",
-        "columns_mobile": "1",
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
         "swipe_on_mobile": false,
         "padding_top": 80,
         "padding_bottom": 80
@@ -127,7 +115,7 @@
   "order": [
     "hero",
     "featured_collection",
-    "collection_tiles",
+    "featured_collection_2",
     "newsletter"
   ]
 }
