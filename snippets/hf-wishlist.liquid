@@ -1,0 +1,136 @@
+{% comment %}
+  Harbour & Field Wishlist Hook Snippet
+  Generic snippet with data hooks for easy app integration
+{% endcomment %}
+
+{%- liquid
+  assign product_id = product.id | default: product_id
+  assign show_wishlist = show_wishlist | default: true
+  assign wishlist_text = wishlist_text | default: 'Add to wishlist'
+  assign wishlist_text_added = wishlist_text_added | default: 'Added to wishlist'
+-%}
+
+{%- if show_wishlist -%}
+  <button 
+    type="button" 
+    class="button button--outline hf-wishlist-button" 
+    data-hf-wishlist
+    data-product-id="{{ product_id }}"
+    aria-label="Add {{ product.title | escape }} to wishlist"
+  >
+    <span class="hf-wishlist-icon" aria-hidden="true">♡</span>
+    <span class="hf-wishlist-text">{{ wishlist_text }}</span>
+  </button>
+{%- endif -%}
+
+<style>
+  .hf-wishlist-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(var(--color-foreground), 0.2);
+    background: transparent;
+  }
+  
+  .hf-wishlist-button:hover {
+    background: rgba(var(--color-accent-1), 0.05);
+    border-color: rgb(var(--color-accent-1));
+    transform: translateY(-1px);
+  }
+  
+  .hf-wishlist-button.added {
+    background: rgb(var(--color-accent-1));
+    color: rgb(var(--color-background));
+    border-color: rgb(var(--color-accent-1));
+  }
+  
+  .hf-wishlist-button.added .hf-wishlist-icon {
+    color: #ff6b6b;
+  }
+  
+  .hf-wishlist-icon {
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+  }
+  
+  .hf-wishlist-button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+</style>
+
+<script>
+  // Basic wishlist functionality with localStorage fallback
+  document.addEventListener('DOMContentLoaded', function() {
+    const wishlistButtons = document.querySelectorAll('[data-hf-wishlist]');
+    
+    wishlistButtons.forEach(button => {
+      const productId = button.dataset.productId;
+      const icon = button.querySelector('.hf-wishlist-icon');
+      const text = button.querySelector('.hf-wishlist-text');
+      
+      // Check if already in wishlist
+      updateWishlistButton(button, productId, icon, text);
+      
+      button.addEventListener('click', function() {
+        toggleWishlist(productId, button, icon, text);
+      });
+    });
+  });
+  
+  function updateWishlistButton(button, productId, icon, text) {
+    const wishlist = getWishlist();
+    const isInWishlist = wishlist.includes(productId);
+    
+    if (isInWishlist) {
+      button.classList.add('added');
+      icon.textContent = '♥';
+      text.textContent = 'Added to wishlist';
+    } else {
+      button.classList.remove('added');
+      icon.textContent = '♡';
+      text.textContent = 'Add to wishlist';
+    }
+  }
+  
+  function toggleWishlist(productId, button, icon, text) {
+    const wishlist = getWishlist();
+    const isInWishlist = wishlist.includes(productId);
+    
+    if (isInWishlist) {
+      // Remove from wishlist
+      const index = wishlist.indexOf(productId);
+      wishlist.splice(index, 1);
+      button.classList.remove('added');
+      icon.textContent = '♡';
+      text.textContent = 'Add to wishlist';
+    } else {
+      // Add to wishlist
+      wishlist.push(productId);
+      button.classList.add('added');
+      icon.textContent = '♥';
+      text.textContent = 'Added to wishlist';
+    }
+    
+    localStorage.setItem('hf-wishlist', JSON.stringify(wishlist));
+    
+    // Dispatch custom event for app integration
+    button.dispatchEvent(new CustomEvent('wishlistChanged', {
+      detail: { productId, added: !isInWishlist }
+    }));
+  }
+  
+  function getWishlist() {
+    try {
+      return JSON.parse(localStorage.getItem('hf-wishlist') || '[]');
+    } catch {
+      return [];
+    }
+  }
+</script>

@@ -1,0 +1,21 @@
+{% comment %}
+  Harbour & Field Preorder Badge Snippet
+  Shows preorder badge when product is out of stock but allows backorders
+{% endcomment %}
+
+{%- liquid
+  assign variant = product.selected_or_first_available_variant | default: product.variants.first
+  assign show_preorder = false
+  
+  if variant.inventory_policy == 'continue' and variant.inventory_quantity <= 0
+    assign show_preorder = true
+  elsif product.available == false and product.tags contains 'preorder'
+    assign show_preorder = true
+  endif
+-%}
+
+{%- if show_preorder -%}
+  <span class="hf-preorder-badge" data-preorder-badge>
+    Pre-order
+  </span>
+{%- endif -%}

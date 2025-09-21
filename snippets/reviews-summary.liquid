@@ -1,0 +1,19 @@
+{% comment %}
+  Harbour & Field Reviews Summary Snippet
+  App-ready reviews summary placeholder with data hooks for easy app integration
+{% endcomment %}
+
+{%- liquid
+  assign product_id = product.id | default: product_id
+  assign show_reviews = show_reviews | default: true
+-%}
+
+{%- if show_reviews -%}
+  <div class="hf-reviews" data-reviews-summary data-product-id="{{ product_id }}" aria-label="Product reviews">
+    <span class="hf-stars" aria-hidden="true">★★★★★</span>
+    <span class="sr-only">Review stars placeholder</span>
+    <a href="#reviews" class="hf-reviews-link" data-reviews-link>
+      Read reviews
+    </a>
+  </div>
+{%- endif -%}

@@ -129,6 +129,9 @@
   border-collapse: collapse;
   margin: 2rem 0;
   font-size: 1.4rem;
+  border: 1px solid rgba(var(--color-foreground), 0.1);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .hf-size-table th,
@@ -147,6 +150,56 @@
 .hf-size-table th[scope="row"] {
   background: rgba(var(--color-accent-1), 0.1);
   font-weight: 600;
+}
+
+.hf-size-table-header {
+  background: rgba(var(--color-foreground), 0.08) !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1.2rem;
+}
+
+.hf-size-table-row-header {
+  background: rgba(var(--color-accent-1), 0.15) !important;
+  font-weight: 700;
+  color: rgb(var(--color-accent-1));
+}
+
+.hf-size-table-cell {
+  font-weight: 500;
+}
+
+.hf-size-guide-note {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(var(--color-accent-1), 0.05);
+  border-radius: 8px;
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.hf-size-guide-note p {
+  margin: 0 0 1rem 0;
+}
+
+.hf-size-guide-note ul {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.hf-size-guide-note li {
+  margin-bottom: 0.5rem;
+}
+
+.hf-size-guide-note strong {
+  color: rgb(var(--color-accent-1));
+  font-weight: 600;
+}
+
+.hf-size-guide-note em {
+  color: rgba(var(--color-foreground), 0.7);
+  font-style: italic;
 }
 
 /* Screen reader only text */

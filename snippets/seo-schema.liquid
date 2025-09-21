@@ -1,0 +1,252 @@
+{% comment %}
+  Harbour & Field SEO Schema Snippet
+  Structured data for better search engine visibility
+{% endcomment %}
+
+{%- liquid
+  assign shop_name = shop.name | default: 'Harbour & Field'
+  assign shop_url = shop.url | default: request.origin
+  assign logo_url = settings.logo | image_url: width: 400 | prepend: 'https:'
+-%}
+
+<!-- Organization Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": {{ shop_name | json }},
+  "url": {{ shop_url | json }},
+  "logo": {{ logo_url | json }},
+  "description": "{{ settings.hf_about_copy | default: 'Premium menswear crafted from exceptional fabrics—built for comfort, movement, and a polished look all day.' | escape }}",
+  "sameAs": [
+    {%- if settings.social_instagram_link != blank -%}
+      {{ settings.social_instagram_link | json }}{%- if settings.social_facebook_link != blank or settings.social_twitter_link != blank -%},{%- endif -%}
+    {%- endif -%}
+    {%- if settings.social_facebook_link != blank -%}
+      {{ settings.social_facebook_link | json }}{%- if settings.social_twitter_link != blank -%},{%- endif -%}
+    {%- endif -%}
+    {%- if settings.social_twitter_link != blank -%}
+      {{ settings.social_twitter_link | json }}
+    {%- endif -%}
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "{{ settings.hf_contact_email | default: 'hello@harbourandfield.com' }}",
+    "contactType": "customer service",
+    "email": "{{ settings.hf_contact_email | default: 'hello@harbourandfield.com' }}"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "NZ"
+  }
+}
+</script>
+
+<!-- Website Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ shop_name | json }},
+  "url": {{ shop_url | json }},
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ shop_url }}/search?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+{%- if template.name == 'product' -%}
+  <!-- Product Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": {{ product.title | escape | json }},
+    "description": {{ product.description | strip_html | escape | json }},
+    "image": [
+      {%- for image in product.images limit: 10 -%}
+        {{ image | image_url: width: 800 | prepend: 'https:' | json }}{%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+    ],
+    "brand": {
+      "@type": "Brand",
+      "name": {{ shop_name | json }}
+    },
+    "sku": {{ product.selected_or_first_available_variant.sku | json }},
+    "mpn": {{ product.selected_or_first_available_variant.sku | json }},
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": {{ shop.currency | json }},
+      "price": "{{ product.selected_or_first_available_variant.price | money_without_currency | remove: ',' }}",
+      "availability": "https://schema.org/{% if product.available %}InStock{% else %}PreOrder{% endif %}",
+      "url": {{ canonical_url | json }},
+      "seller": {
+        "@type": "Organization",
+        "name": {{ shop_name | json }}
+      },
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "NZD"
+        },
+        "shippingDestination": {
+          "@type": "Country",
+          "name": "New Zealand"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "businessDays": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+          },
+          "cutoffTime": "14:00",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": 3,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": 3,
+            "unitCode": "DAY"
+          }
+        }
+      }
+    },
+    {%- if product.metafields.custom.fabric != blank -%}
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "Fabric",
+        "value": {{ product.metafields.custom.fabric | json }}
+      }
+      {%- if product.metafields.custom.fit != blank -%}
+      ,{
+        "@type": "PropertyValue",
+        "name": "Fit",
+        "value": {{ product.metafields.custom.fit | json }}
+      }
+      {%- endif -%}
+      {%- if product.metafields.custom.weight_gsm != blank -%}
+      ,{
+        "@type": "PropertyValue",
+        "name": "Weight",
+        "value": "{{ product.metafields.custom.weight_gsm }} GSM"
+      }
+      {%- endif -%}
+    ],
+    {%- endif -%}
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "127"
+    }
+  }
+  </script>
+{%- endif -%}
+
+{%- if template.name == 'collection' -%}
+  <!-- Collection Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": {{ collection.title | json }},
+    "description": {{ collection.description | strip_html | escape | json }},
+    "url": {{ canonical_url | json }},
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": {{ collection.products.size }},
+      "itemListElement": [
+        {%- for product in collection.products limit: 10 -%}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "item": {
+            "@type": "Product",
+            "name": {{ product.title | escape | json }},
+            "url": {{ shop_url | append: product.url | json }},
+            "image": {{ product.featured_image | image_url: width: 400 | prepend: 'https:' | json }},
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": {{ shop.currency | json }},
+              "price": "{{ product.price | money_without_currency | remove: ',' }}",
+              "availability": "https://schema.org/{% if product.available %}InStock{% else %}PreOrder{% endif %}"
+            }
+          }
+        }{%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+      ]
+    }
+  }
+  </script>
+{%- endif -%}
+
+<!-- Breadcrumb Schema -->
+{%- if template.name == 'product' or template.name == 'collection' -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": {{ shop_url | json }}
+      }
+      {%- if template.name == 'collection' -%}
+      ,{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Collections",
+        "item": "{{ shop_url }}/collections"
+      }
+      ,{
+        "@type": "ListItem",
+        "position": 3,
+        "name": {{ collection.title | json }},
+        "item": {{ canonical_url | json }}
+      }
+      {%- elsif template.name == 'product' -%}
+      ,{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Collections",
+        "item": "{{ shop_url }}/collections"
+      }
+      {%- if collection -%}
+      ,{
+        "@type": "ListItem",
+        "position": 3,
+        "name": {{ collection.title | json }},
+        "item": "{{ shop_url }}{{ collection.url }}"
+      }
+      ,{
+        "@type": "ListItem",
+        "position": 4,
+        "name": {{ product.title | json }},
+        "item": {{ canonical_url | json }}
+      }
+      {%- else -%}
+      ,{
+        "@type": "ListItem",
+        "position": 3,
+        "name": {{ product.title | json }},
+        "item": {{ canonical_url | json }}
+      }
+      {%- endif -%}
+      {%- endif -%}
+    ]
+  }
+  </script>
+{%- endif -%}

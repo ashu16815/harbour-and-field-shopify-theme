@@ -1,0 +1,53 @@
+{% comment %}
+  Harbour & Field Back-in-Stock Hook Snippet
+  Generic snippet with data hooks for easy app integration
+{% endcomment %}
+
+{%- liquid
+  assign product_id = product.id | default: product_id
+  assign variant_id = product.selected_or_first_available_variant.id | default: variant_id
+  assign show_bis = show_bis | default: true
+  assign bis_text = bis_text | default: 'Notify me when back in stock'
+-%}
+
+{%- if show_bis and product.available == false -%}
+  <button 
+    type="button" 
+    class="button button--secondary hf-bis-button" 
+    data-hf-bis
+    data-product-id="{{ product_id }}"
+    data-variant-id="{{ variant_id }}"
+    aria-label="Get notified when {{ product.title | escape }} is back in stock"
+  >
+    <span class="hf-bis-icon" aria-hidden="true">🔔</span>
+    {{ bis_text }}
+  </button>
+{%- endif -%}
+
+<style>
+  .hf-bis-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .hf-bis-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(var(--color-foreground), 0.15);
+  }
+  
+  .hf-bis-icon {
+    font-size: 1.4rem;
+  }
+  
+  .hf-bis-button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+</style>
