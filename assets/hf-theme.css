@@ -1117,3 +1117,29 @@
     text-align: center !important;
   }
 }
+
+/* Related Products - Hide When Empty */
+.collection:empty,
+.collection .grid:empty,
+.collection .grid .grid__item:empty {
+  display: none !important;
+}
+
+/* Hide related products section if no products in collection */
+.collection[data-id*="related-products"]:not(:has(.grid__item)) {
+  display: none !important;
+}
+
+/* Alternative approach for older browsers */
+.collection[data-id*="related-products"] .grid:not(:has(.grid__item)) {
+  display: none !important;
+}
+
+.collection[data-id*="related-products"] .grid:empty {
+  display: none !important;
+}
+
+/* Ensure the section is hidden if collection is empty */
+.collection[data-id*="related-products"]:has(.collection--empty) {
+  display: none !important;
+}
