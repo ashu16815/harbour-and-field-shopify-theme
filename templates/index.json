@@ -31,7 +31,7 @@
         "height": "large",
         "desktop_image_focus": "center center",
         "color_scheme": "background-2",
-        "overlay_opacity": 25,
+        "overlay_opacity": 45,
         "show_text_box": true,
         "text_alignment": "center",
         "text_alignment_mobile": "center",

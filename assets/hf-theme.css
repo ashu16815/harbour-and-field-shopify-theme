@@ -812,50 +812,296 @@
   }
 }
 
-/* Hero Button Readability Fixes */
+/* Harbour & Field Design System - Hero Section */
+.banner__heading {
+  color: #F7F6F3 !important;
+  font-weight: 700 !important;
+  font-size: 3rem !important;
+  line-height: 1.2 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+.banner__text {
+  color: #E8E6E2 !important;
+  font-size: 1.1rem !important;
+  line-height: 1.4 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Hero Button - Design System */
 .banner__buttons .button {
-  background: rgba(0, 0, 0, 0.9) !important;
-  color: #ffffff !important;
-  border: 2px solid #ffffff !important;
+  background: #C5A880 !important;
+  color: #0F0F10 !important;
+  border: 2px solid #C5A880 !important;
   font-weight: 600 !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+  border-radius: 8px !important;
+  padding: 12px 24px !important;
+  min-height: 44px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
   transition: all 0.3s ease !important;
 }
 
 .banner__buttons .button:hover {
-  background: rgba(255, 255, 255, 0.95) !important;
-  color: #000000 !important;
-  border-color: #000000 !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4) !important;
+  background: #B89A6F !important;
+  border-color: #B89A6F !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
 }
 
 .banner__buttons .button:focus {
-  outline: 3px solid #ffffff !important;
+  outline: 2px solid #F7F6F3 !important;
   outline-offset: 2px !important;
+}
+
+.banner__buttons .button:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15) !important;
 }
 
 /* Ensure text is always readable */
 .banner__buttons .button span {
   color: inherit !important;
   font-weight: inherit !important;
-  text-shadow: inherit !important;
 }
 
-/* High contrast mode support for buttons */
-@media (prefers-contrast: high) {
-  .banner__buttons .button {
-    background: #000000 !important;
-    color: #ffffff !important;
-    border: 3px solid #ffffff !important;
+/* Mobile responsive typography */
+@media screen and (max-width: 749px) {
+  .banner__heading {
+    font-size: 2.2rem !important;
   }
   
-  .banner__buttons .button:hover {
-    background: #ffffff !important;
-    color: #000000 !important;
-    border: 3px solid #000000 !important;
+  .banner__text {
+    font-size: 1rem !important;
+  }
+  
+  .banner__buttons .button {
+    padding: 10px 20px !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Collection Page Design System */
+.collection__title {
+  font-size: 2.2rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.collection__description {
+  display: none !important;
+}
+
+/* Compact Chip Filters */
+.facets__form {
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  padding: 0 1rem !important;
+}
+
+.facets__wrapper {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin-bottom: 1.5rem !important;
+  padding: 1rem 0 !important;
+}
+
+.facet-group {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  align-items: center !important;
+}
+
+.facet-group__title {
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  color: #0F0F10 !important;
+  margin-right: 8px !important;
+  margin-bottom: 0 !important;
+}
+
+.facet-group__list {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.facet-group__item {
+  margin: 0 !important;
+}
+
+/* Chip Button Styles */
+.facet-checkbox,
+.facet-radio {
+  display: none !important;
+}
+
+.facet-checkbox + label,
+.facet-radio + label {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 8px 16px !important;
+  background: #F3F1ED !important;
+  color: #0F0F10 !important;
+  border: 1px solid #D9D4CB !important;
+  border-radius: 999px !important;
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  text-decoration: none !important;
+  min-height: 36px !important;
+}
+
+.facet-checkbox:checked + label,
+.facet-radio:checked + label {
+  background: #C5A880 !important;
+  color: #0F0F10 !important;
+  border-color: #C5A880 !important;
+  font-weight: 600 !important;
+}
+
+.facet-checkbox:hover + label,
+.facet-radio:hover + label {
+  background: #E8E6E2 !important;
+  border-color: #C5A880 !important;
+  transform: translateY(-1px) !important;
+}
+
+.facet-checkbox:focus + label,
+.facet-radio:focus + label {
+  outline: 2px solid #C5A880 !important;
+  outline-offset: 2px !important;
+}
+
+/* Color Swatch Chips */
+.facet-group--color .facet-checkbox + label {
+  padding-left: 8px !important;
+}
+
+.facet-group--color .facet-checkbox + label::before {
+  content: '' !important;
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 50% !important;
+  margin-right: 8px !important;
+  border: 1px solid #D9D4CB !important;
+}
+
+/* Color swatch mapping */
+.facet-group--color .facet-checkbox[value*="white"] + label::before,
+.facet-group--color .facet-checkbox[value*="White"] + label::before {
+  background: #ffffff !important;
+}
+
+.facet-group--color .facet-checkbox[value*="black"] + label::before,
+.facet-group--color .facet-checkbox[value*="Black"] + label::before {
+  background: #000000 !important;
+}
+
+.facet-group--color .facet-checkbox[value*="navy"] + label::before,
+.facet-group--color .facet-checkbox[value*="Navy"] + label::before {
+  background: #1e3a8a !important;
+}
+
+.facet-group--color .facet-checkbox[value*="blue"] + label::before,
+.facet-group--color .facet-checkbox[value*="Blue"] + label::before {
+  background: #3b82f6 !important;
+}
+
+.facet-group--color .facet-checkbox[value*="gray"] + label::before,
+.facet-group--color .facet-checkbox[value*="Gray"] + label::before {
+  background: #6b7280 !important;
+}
+
+.facet-group--color .facet-checkbox[value*="beige"] + label::before,
+.facet-group--color .facet-checkbox[value*="Beige"] + label::before {
+  background: #f5f5dc !important;
+}
+
+/* Filter Controls */
+.facets__footer {
+  display: flex !important;
+  gap: 8px !important;
+  margin-top: 1rem !important;
+  justify-content: flex-end !important;
+}
+
+.facets__clear,
+.facets__reset {
+  padding: 8px 16px !important;
+  background: #F3F1ED !important;
+  color: #0F0F10 !important;
+  border: 1px solid #D9D4CB !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  text-decoration: none !important;
+}
+
+.facets__clear:hover,
+.facets__reset:hover {
+  background: #E8E6E2 !important;
+  border-color: #C5A880 !important;
+}
+
+.facets__apply {
+  padding: 8px 16px !important;
+  background: #C5A880 !important;
+  color: #0F0F10 !important;
+  border: 1px solid #C5A880 !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.facets__apply:hover {
+  background: #B89A6F !important;
+  border-color: #B89A6F !important;
+}
+
+/* Mobile Responsive Filters */
+@media screen and (max-width: 749px) {
+  .facets__wrapper {
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    padding: 0.5rem 0 !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .facet-group {
+    flex-wrap: nowrap !important;
+    min-width: max-content !important;
+  }
+  
+  .facet-group__list {
+    flex-wrap: nowrap !important;
+  }
+  
+  .facet-checkbox + label,
+  .facet-radio + label {
+    white-space: nowrap !important;
+    font-size: 0.8rem !important;
+    padding: 6px 12px !important;
+  }
+  
+  .facets__footer {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  
+  .facets__clear,
+  .facets__reset,
+  .facets__apply {
+    width: 100% !important;
+    text-align: center !important;
   }
 }
