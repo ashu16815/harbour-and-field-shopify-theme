@@ -1,1 +1,147 @@
-{"sections":{"main":{"type":"main-product","blocks":{"vendor":{"type":"text","settings":{"text":"{{ product.vendor }}","text_style":"uppercase"}},"title":{"type":"title","settings":{}},"price":{"type":"price","settings":{}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button","swatch_shape":"circle"}},"quantity_selector":{"type":"quantity_selector","settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_gift_card_recipient":true}},"description":{"type":"description","settings":{}},"share":{"type":"share","settings":{"share_label":"Share"}}},"block_order":["vendor","title","price","variant_picker","quantity_selector","buy_buttons","description","share"],"settings":{"enable_sticky_info":true,"color_scheme":"scheme-1","media_size":"large","constrain_to_viewport":true,"media_fit":"contain","gallery_layout":"stacked","mobile_thumbnails":"hide","media_position":"left","image_zoom":"lightbox","hide_variants":true,"enable_video_looping":false,"padding_top":36,"padding_bottom":12}},"related-products":{"type":"related-products","settings":{"heading":"You may also like","heading_size":"h2","products_to_show":4,"columns_desktop":4,"columns_mobile":"2","color_scheme":"scheme-1","image_ratio":"square","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"padding_top":36,"padding_bottom":28}}},"order":["main","related-products"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "reviews": {
+          "type": "text",
+          "settings": {
+            "text": "{% render 'reviews-summary', product: product, show_reviews: true %}",
+            "text_style": "body"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "preorder_badge": {
+          "type": "text",
+          "settings": {
+            "text": "{% render 'preorder-badge', product: product %}",
+            "text_style": "body"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "size_chart": {
+          "type": "text",
+          "settings": {
+            "text": "<button type=\"button\" class=\"button button--outline\" data-open-size-chart>Find your size</button>",
+            "text_style": "body"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "wishlist_bis": {
+          "type": "text",
+          "settings": {
+            "text": "{% render 'hf-wishlist', product: product, show_wishlist: true %}{% render 'hf-bis', product: product, show_bis: true %}",
+            "text_style": "body"
+          }
+        },
+        "fabric_details": {
+          "type": "text",
+          "settings": {
+            "text": "{% if product.metafields.custom.fabric %}<div class=\"hf-fabric-details\"><h4>Fabric</h4><p>{{ product.metafields.custom.fabric }}</p></div>{% endif %}{% if product.metafields.custom.fit %}<div class=\"hf-fit-details\"><h4>Fit</h4><p>{{ product.metafields.custom.fit }}</p></div>{% endif %}{% if product.metafields.custom.weight_gsm %}<div class=\"hf-weight-details\"><h4>Weight</h4><p>{{ product.metafields.custom.weight_gsm }} GSM</p></div>{% endif %}",
+            "text_style": "body"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "shipping_returns": {
+          "type": "text",
+          "settings": {
+            "text": "<div class=\"hf-shipping-returns\"><h4>Shipping & Returns</h4><p>{{ settings.hf_shipping_promise | default: 'NZ orders ship in 1–3 business days. Free shipping over $120 NZD.' }}</p><p>{{ settings.hf_returns_promise | default: '30-day hassle-free returns & instant size exchanges.' }}</p></div>",
+            "text_style": "body"
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title", 
+        "reviews",
+        "price",
+        "preorder_badge",
+        "variant_picker",
+        "size_chart",
+        "quantity_selector",
+        "buy_buttons",
+        "wishlist_bis",
+        "fabric_details",
+        "description",
+        "shipping_returns",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products"
+  ]
+}
