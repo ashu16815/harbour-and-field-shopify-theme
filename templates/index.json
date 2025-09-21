@@ -46,7 +46,7 @@
       "settings": {
         "title": "Editor's Picks",
         "heading_size": "h2",
-        "collection": "new-arrivals",
+        "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
         "columns_mobile": "2",
@@ -70,19 +70,19 @@
         "collection_1": {
           "type": "featured_collection",
           "settings": {
-            "collection": "new-arrivals"
+            "collection": "all"
           }
         },
         "collection_2": {
           "type": "featured_collection",
           "settings": {
-            "collection": "essentials"
+            "collection": "all"
           }
         },
         "collection_3": {
           "type": "featured_collection",
           "settings": {
-            "collection": "shirts"
+            "collection": "all"
           }
         }
       },
