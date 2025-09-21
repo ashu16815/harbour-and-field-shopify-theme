@@ -1143,3 +1143,97 @@
 .collection[data-id*="related-products"]:has(.collection--empty) {
   display: none !important;
 }
+
+/* Differentiate Editor's Picks vs New Arrivals Sections */
+.featured-collection[data-section-type="featured-collection"]:first-of-type {
+  background: var(--glass-bg) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border-radius: 20px !important;
+  margin: 2rem 0 !important;
+  padding: 2rem !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.featured-collection[data-section-type="featured-collection"]:first-of-type::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: var(--glass-gradient) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+.featured-collection[data-section-type="featured-collection"]:first-of-type > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Editor's Picks - Premium styling */
+.featured-collection[data-section-type="featured-collection"]:first-of-type .title {
+  color: #C5A880 !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  margin-bottom: 2rem !important;
+  position: relative !important;
+}
+
+.featured-collection[data-section-type="featured-collection"]:first-of-type .title::after {
+  content: '✨' !important;
+  position: absolute !important;
+  right: -2rem !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  font-size: 1.2rem !important;
+}
+
+/* New Arrivals - Fresh styling */
+.featured-collection[data-section-type="featured-collection"]:last-of-type {
+  background: linear-gradient(135deg, rgba(197, 168, 128, 0.05), rgba(197, 168, 128, 0.02)) !important;
+  border: 1px solid rgba(197, 168, 128, 0.2) !important;
+  border-radius: 16px !important;
+  margin: 2rem 0 !important;
+  padding: 2rem !important;
+  position: relative !important;
+}
+
+.featured-collection[data-section-type="featured-collection"]:last-of-type .title {
+  color: #0F0F10 !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  margin-bottom: 2rem !important;
+  position: relative !important;
+}
+
+.featured-collection[data-section-type="featured-collection"]:last-of-type .title::after {
+  content: '🆕' !important;
+  position: absolute !important;
+  right: -2rem !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  font-size: 1.2rem !important;
+}
+
+/* Section spacing */
+.featured-collection[data-section-type="featured-collection"] + .featured-collection[data-section-type="featured-collection"] {
+  margin-top: 4rem !important;
+}
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 749px) {
+  .featured-collection[data-section-type="featured-collection"]:first-of-type .title::after,
+  .featured-collection[data-section-type="featured-collection"]:last-of-type .title::after {
+    right: -1.5rem !important;
+    font-size: 1rem !important;
+  }
+  
+  .featured-collection[data-section-type="featured-collection"]:first-of-type,
+  .featured-collection[data-section-type="featured-collection"]:last-of-type {
+    padding: 1.5rem !important;
+    margin: 1rem 0 !important;
+  }
+}

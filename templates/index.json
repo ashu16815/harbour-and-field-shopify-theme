@@ -46,7 +46,7 @@
       "settings": {
         "title": "Editor's Picks",
         "heading_size": "h2",
-        "collection": "all",
+        "collection": "editors-picks",
         "products_to_show": 8,
         "columns_desktop": 4,
         "columns_mobile": "2",
@@ -58,7 +58,7 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "none",
+        "quick_add": "standard",
         "swipe_on_mobile": false,
         "padding_top": 80,
         "padding_bottom": 80
@@ -67,9 +67,9 @@
     "featured_collection_2": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured Products",
+        "title": "New Arrivals",
         "heading_size": "h2",
-        "collection": "all",
+        "collection": "new-arrivals",
         "products_to_show": 6,
         "columns_desktop": 3,
         "columns_mobile": "2",
@@ -81,7 +81,7 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "none",
+        "quick_add": "standard",
         "swipe_on_mobile": false,
         "padding_top": 80,
         "padding_bottom": 80
