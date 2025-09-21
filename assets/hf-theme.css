@@ -841,6 +841,18 @@
   transition: all 0.3s ease !important;
 }
 
+/* Hide empty secondary button */
+.banner__buttons .button:empty,
+.banner__buttons .button[aria-label="Button label"],
+.banner__buttons .button:not([href]):not([type]):empty {
+  display: none !important;
+}
+
+/* Ensure only primary button is visible when secondary is empty */
+.banner__buttons--multiple .button:last-child:empty {
+  display: none !important;
+}
+
 .banner__buttons .button:hover {
   background: #B89A6F !important;
   border-color: #B89A6F !important;
