@@ -1,13 +1,95 @@
-/* Harbour & Field Theme Styles */
+/* Harbour & Field Theme Styles - Liquid Glass Design System */
 
-/* Trust Bar Styles */
+/* CSS Custom Properties for Liquid Glass */
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-bg-strong: rgba(255, 255, 255, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --glass-shadow-strong: 0 16px 64px rgba(0, 0, 0, 0.15);
+  --glass-blur: blur(20px);
+  --glass-blur-strong: blur(40px);
+  --glass-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  --glass-gradient-strong: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  --glass-accent: rgba(var(--color-accent-1), 0.1);
+  --glass-accent-strong: rgba(var(--color-accent-1), 0.2);
+}
+
+/* Dark mode glass properties */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --glass-bg: rgba(0, 0, 0, 0.2);
+    --glass-bg-strong: rgba(0, 0, 0, 0.3);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --glass-shadow-strong: 0 16px 64px rgba(0, 0, 0, 0.4);
+    --glass-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    --glass-gradient-strong: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  }
+}
+
+/* Liquid Glass Base Classes */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--glass-gradient);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glass-strong {
+  background: var(--glass-bg-strong);
+  backdrop-filter: var(--glass-blur-strong);
+  -webkit-backdrop-filter: var(--glass-blur-strong);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: var(--glass-shadow-strong);
+}
+
+.glass-strong::before {
+  background: var(--glass-gradient-strong);
+}
+
+.glass-content {
+  position: relative;
+  z-index: 2;
+}
+
+.glass-accent {
+  background: var(--glass-accent);
+  border: 1px solid rgba(var(--color-accent-1), 0.3);
+}
+
+.glass-accent::before {
+  background: linear-gradient(135deg, var(--glass-accent), var(--glass-accent-strong));
+}
+
+/* Trust Bar Styles - Liquid Glass */
 .hf-trust-bar {
-  background: var(--gradient-base-background-1);
-  border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
-  padding: 0.8rem 0;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 1.2rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--glass-shadow);
 }
 
 .hf-trust-bar__content {
@@ -98,12 +180,38 @@
   margin-top: 0.8rem;
 }
 
-/* Reviews summary styles */
+/* Reviews summary styles - Liquid Glass */
 .hf-reviews {
   display: flex;
   align-items: center;
   gap: 0.8rem;
   margin: 0.8rem 0;
+  padding: 0.8rem 1.2rem;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  box-shadow: var(--glass-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.hf-reviews::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--glass-gradient);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hf-reviews > * {
+  position: relative;
+  z-index: 2;
 }
 
 .hf-stars {
@@ -123,15 +231,38 @@
   text-decoration: underline;
 }
 
-/* Size chart modal styles */
+/* Size chart modal styles - Liquid Glass */
 .hf-size-table {
   width: 100%;
   border-collapse: collapse;
   margin: 2rem 0;
   font-size: 1.4rem;
-  border: 1px solid rgba(var(--color-foreground), 0.1);
-  border-radius: 8px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
   overflow: hidden;
+  box-shadow: var(--glass-shadow);
+  position: relative;
+}
+
+.hf-size-table::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--glass-gradient);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hf-size-table th,
+.hf-size-table td {
+  position: relative;
+  z-index: 2;
 }
 
 .hf-size-table th,
@@ -255,15 +386,34 @@
   }
 }
 
-/* Product Detail Page Enhancements */
+/* Product Detail Page Enhancements - Liquid Glass */
 .hf-fabric-details,
 .hf-fit-details,
 .hf-weight-details {
   margin: 1.5rem 0;
   padding: 1.5rem;
-  background: rgba(var(--color-accent-1), 0.05);
-  border-radius: 8px;
-  border-left: 4px solid rgb(var(--color-accent-1));
+  background: var(--glass-accent);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(var(--color-accent-1), 0.3);
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.hf-fabric-details::before,
+.hf-fit-details::before,
+.hf-weight-details::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--glass-accent), var(--glass-accent-strong));
+  pointer-events: none;
+  z-index: 1;
 }
 
 .hf-fabric-details h4,
@@ -289,9 +439,26 @@
 .hf-shipping-returns {
   margin: 2rem 0;
   padding: 2rem;
-  background: rgba(var(--color-foreground), 0.02);
-  border-radius: 8px;
-  border: 1px solid rgba(var(--color-foreground), 0.1);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.hf-shipping-returns::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--glass-gradient);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .hf-shipping-returns h4 {
@@ -425,5 +592,222 @@
   
   .hf-shipping-returns {
     border-width: 2px;
+  }
+}
+
+/* Liquid Glass Theme Enhancements */
+
+/* Header and Navigation Glass Effects */
+.header {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.header__heading-logo {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 0.8rem 1.2rem;
+  box-shadow: var(--glass-shadow);
+}
+
+/* Product Cards Glass Effects */
+.card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--glass-gradient);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--glass-shadow-strong);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card__content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Buttons Glass Effects */
+.button {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  box-shadow: var(--glass-shadow);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--glass-gradient);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.button:hover {
+  background: var(--glass-accent);
+  border-color: rgba(var(--color-accent-1), 0.3);
+  transform: translateY(-2px);
+  box-shadow: var(--glass-shadow-strong);
+}
+
+.button:hover::before {
+  opacity: 1;
+}
+
+.button > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Primary Button Glass Effects */
+.button--primary {
+  background: var(--glass-accent);
+  border-color: rgba(var(--color-accent-1), 0.3);
+}
+
+.button--primary::before {
+  background: linear-gradient(135deg, var(--glass-accent), var(--glass-accent-strong));
+  opacity: 1;
+}
+
+/* Form Elements Glass Effects */
+.input,
+.select__select,
+.textarea {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  box-shadow: var(--glass-shadow);
+  transition: all 0.3s ease;
+}
+
+.input:focus,
+.select__select:focus,
+.textarea:focus {
+  background: var(--glass-accent);
+  border-color: rgba(var(--color-accent-1), 0.5);
+  box-shadow: var(--glass-shadow-strong);
+  outline: none;
+}
+
+/* Modal Glass Effects */
+.modal__content {
+  background: var(--glass-bg-strong);
+  backdrop-filter: var(--glass-blur-strong);
+  -webkit-backdrop-filter: var(--glass-blur-strong);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: var(--glass-shadow-strong);
+  position: relative;
+  overflow: hidden;
+}
+
+.modal__content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--glass-gradient-strong);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.modal__content > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Cart Drawer Glass Effects */
+.cart-drawer {
+  background: var(--glass-bg-strong);
+  backdrop-filter: var(--glass-blur-strong);
+  -webkit-backdrop-filter: var(--glass-blur-strong);
+  border-left: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow-strong);
+}
+
+/* Footer Glass Effects */
+.footer {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-top: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+/* Mobile Responsive Glass Effects */
+@media screen and (max-width: 749px) {
+  .card {
+    border-radius: 12px;
+  }
+  
+  .button {
+    border-radius: 10px;
+  }
+  
+  .input,
+  .select__select,
+  .textarea {
+    border-radius: 10px;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .button,
+  .hf-filters__option {
+    transition: none;
+  }
+  
+  .card:hover,
+  .button:hover,
+  .hf-filters__option:hover {
+    transform: none;
   }
 }
