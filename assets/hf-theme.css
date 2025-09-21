@@ -811,3 +811,51 @@
     transform: none;
   }
 }
+
+/* Hero Button Readability Fixes */
+.banner__buttons .button {
+  background: rgba(0, 0, 0, 0.9) !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.banner__buttons .button:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4) !important;
+}
+
+.banner__buttons .button:focus {
+  outline: 3px solid #ffffff !important;
+  outline-offset: 2px !important;
+}
+
+/* Ensure text is always readable */
+.banner__buttons .button span {
+  color: inherit !important;
+  font-weight: inherit !important;
+  text-shadow: inherit !important;
+}
+
+/* High contrast mode support for buttons */
+@media (prefers-contrast: high) {
+  .banner__buttons .button {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 3px solid #ffffff !important;
+  }
+  
+  .banner__buttons .button:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 3px solid #000000 !important;
+  }
+}
