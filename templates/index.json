@@ -46,7 +46,7 @@
       "settings": {
         "title": "Editor's Picks",
         "heading_size": "h2",
-        "collection": "editors-picks",
+        "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
         "columns_mobile": "2",
@@ -69,7 +69,7 @@
       "settings": {
         "title": "New Arrivals",
         "heading_size": "h2",
-        "collection": "new-arrivals",
+        "collection": "all",
         "products_to_show": 6,
         "columns_desktop": 3,
         "columns_mobile": "2",
