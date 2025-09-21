@@ -1,0 +1,203 @@
+/* Harbour & Field Theme Styles */
+
+/* Trust Bar Styles */
+.hf-trust-bar {
+  background: var(--gradient-base-background-1);
+  border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
+  padding: 0.8rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hf-trust-bar__content {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hf-trust-bar__message {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: rgb(var(--color-foreground));
+  line-height: 1.3;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hf-trust-bar__text {
+  display: inline-block;
+  min-height: 1.8rem;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .hf-trust-bar__message {
+    transition: none;
+  }
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 749px) {
+  .hf-trust-bar__content {
+    padding: 0 1.5rem;
+  }
+  
+  .hf-trust-bar__message {
+    font-size: 1.2rem;
+  }
+}
+
+/* Focus states for accessibility */
+.hf-trust-bar:focus-within {
+  outline: 2px solid rgb(var(--color-foreground));
+  outline-offset: -2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .hf-trust-bar {
+    border-bottom-color: rgb(var(--color-foreground));
+  }
+  
+  .hf-trust-bar__message {
+    font-weight: 600;
+  }
+}
+
+/* Skip to content link */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+  top: 6px;
+}
+
+/* Preorder badge styles */
+.hf-preorder-badge {
+  display: inline-block;
+  background: rgb(var(--color-accent-1));
+  color: rgb(var(--color-background));
+  padding: 0.4rem 0.8rem;
+  border-radius: 1.6rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.8rem;
+}
+
+/* Reviews summary styles */
+.hf-reviews {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0.8rem 0;
+}
+
+.hf-stars {
+  color: #ffc107;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.hf-reviews-link {
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.hf-reviews-link:hover {
+  text-decoration: underline;
+}
+
+/* Size chart modal styles */
+.hf-size-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 1.4rem;
+}
+
+.hf-size-table th,
+.hf-size-table td {
+  padding: 1.2rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(var(--color-foreground), 0.1);
+}
+
+.hf-size-table th {
+  background: rgba(var(--color-foreground), 0.05);
+  font-weight: 600;
+  color: rgb(var(--color-foreground));
+}
+
+.hf-size-table th[scope="row"] {
+  background: rgba(var(--color-accent-1), 0.1);
+  font-weight: 600;
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus visible styles */
+.hf-trust-bar button:focus-visible,
+.hf-trust-bar a:focus-visible {
+  outline: 2px solid rgb(var(--color-foreground));
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Loading states */
+.hf-loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Animation for trust bar text changes */
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.hf-trust-bar__text.changing {
+  animation: fadeInOut 0.6s ease-in-out;
+}
+
+/* Responsive design improvements */
+@media screen and (max-width: 990px) {
+  .hf-trust-bar__content {
+    padding: 0 1rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .hf-trust-bar {
+    background: rgba(var(--color-background), 0.8);
+  }
+}

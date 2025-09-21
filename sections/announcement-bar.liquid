@@ -135,6 +135,17 @@
           }
         </style>
       {%- endif -%}
+    {%- else -%}
+      <!-- Harbour & Field Trust Bar with rotating USPs -->
+      <div class="hf-trust-bar" role="region" aria-label="Trust and shipping information">
+        <div class="hf-trust-bar__content" aria-live="polite">
+          <div class="hf-trust-bar__message h5">
+            <span class="hf-trust-bar__text" data-trust-message="0">
+              {{ settings.hf_shipping_promise | default: "NZ orders ship in 1–3 business days. Free shipping over $120 NZD." }}
+            </span>
+          </div>
+        </div>
+      </div>
     {%- endif -%}
     <div class="localization-wrapper">
       {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
@@ -161,6 +172,67 @@
     </div>
   </div>
 </div>
+
+{% javascript %}
+  // Harbour & Field Trust Bar Rotation
+  class TrustBar {
+    constructor() {
+      this.messages = [
+        "{{ settings.hf_shipping_promise | default: 'NZ orders ship in 1–3 business days. Free shipping over $120 NZD.' }}",
+        "{{ settings.hf_returns_promise | default: '30-day hassle-free returns & instant size exchanges.' }}",
+        "{{ settings.hf_usp_1 | default: 'Ethically made' }}",
+        "{{ settings.hf_usp_2 | default: 'Luxury cotton fabrics' }}",
+        "{{ settings.hf_usp_3 | default: 'Tailored but comfortable fits' }}"
+      ].filter(msg => msg.trim() !== '');
+      
+      this.currentIndex = 0;
+      this.element = document.querySelector('.hf-trust-bar__text');
+      this.interval = null;
+      
+      if (this.element && this.messages.length > 1) {
+        this.init();
+      }
+    }
+    
+    init() {
+      // Pause on hover
+      const trustBar = document.querySelector('.hf-trust-bar');
+      if (trustBar) {
+        trustBar.addEventListener('mouseenter', () => this.pause());
+        trustBar.addEventListener('mouseleave', () => this.resume());
+      }
+      
+      // Start rotation
+      this.resume();
+    }
+    
+    rotate() {
+      if (!this.element) return;
+      
+      this.currentIndex = (this.currentIndex + 1) % this.messages.length;
+      this.element.textContent = this.messages[this.currentIndex];
+    }
+    
+    pause() {
+      if (this.interval) {
+        clearInterval(this.interval);
+        this.interval = null;
+      }
+    }
+    
+    resume() {
+      if (this.interval) return;
+      this.interval = setInterval(() => this.rotate(), 6000);
+    }
+  }
+  
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => new TrustBar());
+  } else {
+    new TrustBar();
+  }
+{% endjavascript %}
 
 {% schema %}
 {

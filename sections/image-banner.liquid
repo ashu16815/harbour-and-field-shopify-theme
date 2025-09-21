@@ -124,7 +124,11 @@
               class="banner__heading inline-richtext {{ block.settings.heading_size }}"
               {{ block.shopify_attributes }}
             >
-              {{ block.settings.heading }}
+              {%- if block.settings.heading == 'Premium Menswear. Surprisingly Attainable.' -%}
+                {{ settings.hf_tagline | default: block.settings.heading }}
+              {%- else -%}
+                {{ block.settings.heading }}
+              {%- endif -%}
             </h2>
           {%- when 'text' -%}
             <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
