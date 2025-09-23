@@ -312,7 +312,7 @@
       Skip to main content
     </a>
 
-    <div class="slx-annc" role="region" aria-live="polite">{{ variables.CAMPAIGN_TITLE | default: 'Soft. Luxe. Yours' }} — <strong>{{ variables.DISCOUNT_PERCENT | default: 50 }}% OFF Storewide</strong> • Discount <strong>applies automatically</strong> in cart & checkout. <a href="/collections/all">Shop now</a></div>
+    <div class="slx-sticky"><div class="slx-annc" role="region" aria-live="polite">{{ variables.CAMPAIGN_TITLE | default: 'Soft. Luxe. Yours' }} — <strong>{{ variables.DISCOUNT_PERCENT | default: 50 }}% OFF Storewide</strong> · Discount <strong>applies automatically</strong> in cart & checkout. <a class="slx-btn-mini" href="/collections/all" aria-label="Shop all with 50 percent off">Shop now</a></div></div>
 
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
