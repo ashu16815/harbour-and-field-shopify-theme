@@ -1,0 +1,12 @@
+{% comment %} Campaign config JSON {% endcomment %}
+{% assign slx_title = variables.CAMPAIGN_TITLE | default: 'Soft. Luxe. Yours' %}
+{% assign slx_pct = variables.DISCOUNT_PERCENT | default: 50 %}
+{% assign slx_end = variables.CAMPAIGN_END_ISO | default: '' %}
+<script id="slx-config" type="application/json">
+{
+  "campaignTitle": {{ slx_title | json }},
+  "discountPercent": {{ slx_pct | json }},
+  "automatic": true,
+  "campaignEndISO": {{ slx_end | json }}
+}
+</script>

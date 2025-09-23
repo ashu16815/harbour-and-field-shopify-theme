@@ -110,12 +110,17 @@
         "placeholder": "Enter your email",
         "success_message": "You're on the list — we'll email you as soon as stock lands in NZ."
       }
+    },
+    "slx_hero": {
+      "type": "soft-luxe-hero",
+      "settings": {}
     }
   },
   "order": [
     "hero",
     "featured_collection",
     "featured_collection_2",
-    "newsletter"
+    "newsletter",
+    "slx_hero"
   ]
 }
