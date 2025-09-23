@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "cotton_satin_intro": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cotton Satin Collection",
+            "heading_size": "h1"
+          }
+        },
+        "content": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Why Cotton Satin?</h2>\n<p>Harbour & Field brings you the elegance of <strong>premium cotton satin</strong> — where natural cotton meets the luxury of satin weave.</p>\n<ul>\n<li><strong>Breathable:</strong> Perfect for Auckland's climate, keeping you cool and confident.</li>\n<li><strong>Premium Finish:</strong> Satin weave delivers a subtle sheen and smooth touch for board-ready polish.</li>\n<li><strong>Comfort & Durability:</strong> Long-staple cotton that lasts, resists pilling, and feels soft on skin.</li>\n<li><strong>Sustainable Choice:</strong> Natural cotton, responsibly produced, outperforms synthetic satin in comfort and eco-friendliness.</li>\n</ul>"
+          }
+        }
+      },
+      "block_order": ["heading", "content"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 40
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 20,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "cotton_satin_intro",
+    "product-grid"
+  ]
+}

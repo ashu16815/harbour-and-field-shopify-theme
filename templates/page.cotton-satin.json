@@ -1,0 +1,66 @@
+{
+  "sections": {
+    "cotton_satin_content": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cotton Satin Collection",
+            "heading_size": "h1"
+          }
+        },
+        "content": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Why Cotton Satin?</h2>\n<p>Harbour & Field brings you the elegance of <strong>premium cotton satin</strong> — where natural cotton meets the luxury of satin weave.</p>\n<ul>\n<li><strong>Breathable:</strong> Perfect for Auckland's climate, keeping you cool and confident.</li>\n<li><strong>Premium Finish:</strong> Satin weave delivers a subtle sheen and smooth touch for board-ready polish.</li>\n<li><strong>Comfort & Durability:</strong> Long-staple cotton that lasts, resists pilling, and feels soft on skin.</li>\n<li><strong>Sustainable Choice:</strong> Natural cotton, responsibly produced, outperforms synthetic satin in comfort and eco-friendliness.</li>\n</ul>\n<p>Explore our <a href='/collections/cotton-satin'>Cotton Satin Collection</a> — tailored for leaders, decision-makers, and men of style.</p>"
+          }
+        },
+        "cta_button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Cotton Satin Collection",
+            "button_link": "shopify://collections/cotton-satin",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": ["heading", "content", "cta_button"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Cotton Satin Shirts",
+        "heading_size": "h2",
+        "collection": "cotton-satin",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "accent-1",
+        "image_ratio": "portrait",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "swipe_on_mobile": false,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "cotton_satin_content",
+    "featured_collection"
+  ]
+}
