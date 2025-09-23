@@ -17,7 +17,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "NEW ARRIVALS JUST LANDED",
+            "text": "Discount applies automatically in cart & checkout",
             "link": ""
           }
         },
