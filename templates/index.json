@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
@@ -29,36 +38,35 @@
           }
         }
       },
-      "block_order": ["heading", "text", "buttons"],
+      "block_order": [
+        "heading",
+        "text",
+        "buttons"
+      ],
       "settings": {
-        "height": "large",
-        "desktop_image_focus": "center center",
-        "color_scheme": "background-2",
-        "overlay_opacity": 45,
+        "image": "shopify://shop_images/mens-dress-wear-natural-5-top.jpg",
         "show_text_box": true,
-        "text_alignment": "center",
-        "text_alignment_mobile": "center",
-        "image": "shopify://shop_images/mens-dress-wear-natural-5-top.jpg"
+        "color_scheme": "background-2"
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Editor's Picks",
-        "heading_size": "h2",
         "collection": "all",
         "products_to_show": 8,
+        "title": "Editor's Picks",
+        "heading_size": "h2",
         "columns_desktop": 4,
-        "columns_mobile": "2",
+        "enable_desktop_slider": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
         "color_scheme": "accent-1",
         "image_ratio": "portrait",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "standard",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 80,
         "padding_bottom": 80
@@ -67,21 +75,21 @@
     "featured_collection_2": {
       "type": "featured-collection",
       "settings": {
-        "title": "New Arrivals",
-        "heading_size": "h2",
         "collection": "all",
         "products_to_show": 6,
+        "title": "New Arrivals",
+        "heading_size": "h2",
         "columns_desktop": 3,
-        "columns_mobile": "2",
+        "enable_desktop_slider": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
         "color_scheme": "accent-1",
         "image_ratio": "square",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "standard",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 80,
         "padding_bottom": 80
@@ -98,17 +106,13 @@
           }
         }
       },
-      "block_order": ["heading"],
+      "block_order": [
+        "heading"
+      ],
       "settings": {
         "color_scheme": "background-2",
         "padding_top": 80,
-        "padding_bottom": 80,
-        "heading_alignment": "center",
-        "text_alignment": "center",
-        "form_alignment": "center",
-        "button_label": "Join Waitlist",
-        "placeholder": "Enter your email",
-        "success_message": "You're on the list — we'll email you as soon as stock lands in NZ."
+        "padding_bottom": 80
       }
     },
     "slx_hero": {
