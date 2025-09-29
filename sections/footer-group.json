@@ -20,10 +20,18 @@
             "heading": "<a href=\"/pages/privacy\" target=\"_blank\" title=\"Privacy\">Privacy</a>",
             "menu": "footer"
           }
+        },
+        "link_list_xWjzU4": {
+          "type": "link_list",
+          "settings": {
+            "heading": "<a href=\"/pages/about-us\" title=\"About us\">About us</a>",
+            "menu": "footer"
+          }
         }
       },
       "block_order": [
-        "link_list_acRpf7"
+        "link_list_acRpf7",
+        "link_list_xWjzU4"
       ],
       "custom_css": [],
       "settings": {
