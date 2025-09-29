@@ -1,7 +1,16 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "logo_width": 190,
-    "theme_name": "Harbour & Field",
+    "favicon": "shopify://shop_images/generated-image_3.png",
     "type_header_font": "playfair_display_n6",
     "heading_scale": 120,
     "type_body_font": "inter_n4",
@@ -117,6 +126,7 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
+    "theme_name": "Harbour & Field",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -135,67 +145,67 @@
     "color_schemes": {
       "background-1": {
         "settings": {
-          "background": "#F3F1ED",
+          "background": "#f3f1ed",
           "background_gradient": "",
           "text": "#121212",
-          "button": "#C5A880",
-          "button_label": "#0F0F10",
-          "secondary_button_label": "#C5A880",
+          "button": "#c5a880",
+          "button_label": "#0f0f10",
+          "secondary_button_label": "#c5a880",
           "shadow": "#121212"
         }
       },
       "background-2": {
         "settings": {
-          "background": "#0F0F10",
+          "background": "#0f0f10",
           "background_gradient": "",
-          "text": "#F7F6F3",
-          "button": "#C5A880",
-          "button_label": "#0F0F10",
-          "secondary_button_label": "#C5A880",
+          "text": "#f7f6f3",
+          "button": "#c5a880",
+          "button_label": "#0f0f10",
+          "secondary_button_label": "#c5a880",
           "shadow": "#121212"
         }
       },
       "inverse": {
         "settings": {
-          "background": "#0F0F10",
+          "background": "#0f0f10",
           "background_gradient": "",
-          "text": "#F7F6F3",
-          "button": "#C5A880",
-          "button_label": "#0F0F10",
-          "secondary_button_label": "#C5A880",
+          "text": "#f7f6f3",
+          "button": "#c5a880",
+          "button_label": "#0f0f10",
+          "secondary_button_label": "#c5a880",
           "shadow": "#121212"
         }
       },
       "accent-1": {
         "settings": {
-          "background": "#E4DDD3",
+          "background": "#e4ddd3",
           "background_gradient": "",
           "text": "#121212",
-          "button": "#C5A880",
-          "button_label": "#0F0F10",
-          "secondary_button_label": "#C5A880",
+          "button": "#c5a880",
+          "button_label": "#0f0f10",
+          "secondary_button_label": "#c5a880",
           "shadow": "#121212"
         }
       },
       "accent-2": {
         "settings": {
-          "background": "#F3F1ED",
+          "background": "#f3f1ed",
           "background_gradient": "",
           "text": "#121212",
-          "button": "#C5A880",
-          "button_label": "#0F0F10",
-          "secondary_button_label": "#C5A880",
+          "button": "#c5a880",
+          "button_label": "#0f0f10",
+          "secondary_button_label": "#c5a880",
           "shadow": "#121212"
         }
       },
       "accent-3": {
         "settings": {
-          "background": "#72383D",
+          "background": "#72383d",
           "background_gradient": "",
-          "text": "#F7F6F3",
-          "button": "#C5A880",
-          "button_label": "#0F0F10",
-          "secondary_button_label": "#C5A880",
+          "text": "#f7f6f3",
+          "button": "#c5a880",
+          "button_label": "#0f0f10",
+          "secondary_button_label": "#c5a880",
           "shadow": "#121212"
         }
       }
