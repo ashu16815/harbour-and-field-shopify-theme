@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "main": {
+      "type": "static-page",
+      "settings": {
+        "heading": "Terms & Conditions",
+        "content": "<p>By placing an order with Harbour & Field, you agree to the terms below.</p><p><strong>Orders and Acceptance</strong><br>All orders are subject to review and acceptance. Orders may be cancelled prior to shipping if items do not pass quality control, are out of stock, or due to suspected fraud. You will be notified and refunded promptly if this occurs.</p><p><strong>Products and Pricing</strong><br>We aim to describe and price items accurately. In the event of an error, we may correct it and contact you for confirmation before proceeding.</p><p><strong>Returns</strong><br>Returns are accepted within 30 days in original condition. See our Shipping page for details on timelines and process.</p><p><strong>Limitation of Liability</strong><br>To the extent permitted by law, Harbour & Field is not liable for indirect or consequential damages arising from use of the site or products.</p><p><strong>Governing Law</strong><br>These terms are governed by the laws of New Zealand.</p>"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
+

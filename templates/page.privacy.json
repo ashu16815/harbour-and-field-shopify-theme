@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "main": {
+      "type": "static-page",
+      "settings": {
+        "heading": "Privacy Policy",
+        "content": "<p>We respect your privacy and are committed to protecting your personal information.</p><p><strong>Information we collect</strong><br>We collect information you provide during checkout, account creation, and customer support (such as name, email, phone, shipping/billing address). We also collect limited technical data such as IP address, device and browser information to improve site performance and security.</p><p><strong>How we use your information</strong><br>• To process and fulfill orders, provide customer service, and communicate order updates.<br>• To personalize your experience and improve our products and website.<br>• To send marketing communications if you opt in. You can unsubscribe at any time.</p><p><strong>Sharing</strong><br>We share data only with trusted service providers necessary to run our store (for example: payment processors, shipping carriers, and analytics). We do not sell your personal data.</p><p><strong>Security</strong><br>We use industry-standard security measures and Shopify’s secure infrastructure. No method of transmission is 100% secure, but we work to protect your data.</p><p><strong>Your rights</strong><br>You may request access, correction, or deletion of your personal information by contacting us at <a href=\"mailto:hello@harbourandfield.com\">hello@harbourandfield.com</a>.</p><p><strong>Changes</strong><br>We may update this policy from time to time. Continued use of the site indicates acceptance of the updated policy.</p>"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
+

@@ -316,6 +316,22 @@
             {%- endfor -%}
           </ul>
         {%- endif -%}
+        {%- if section.settings.show_bottom_links -%}
+          <ul class="policies list-unstyled">
+            <li>
+              <small class="copyright__content"><a href="/pages/privacy">Privacy</a></small>
+            </li>
+            <li>
+              <small class="copyright__content"><a href="/pages/shipping">Shipping</a></small>
+            </li>
+            <li>
+              <small class="copyright__content"><a href="/pages/contact">Contact us</a></small>
+            </li>
+            <li>
+              <small class="copyright__content"><a href="/pages/about">About us</a></small>
+            </li>
+          </ul>
+        {%- endif -%}
       </div>
     </div>
   </div>
@@ -491,6 +507,12 @@
       "default": true,
       "label": "t:sections.footer.settings.show_policy.label",
       "info": "t:sections.footer.settings.show_policy.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_bottom_links",
+      "default": true,
+      "label": "Show custom bottom links (Privacy, Shipping, Contact, About)"
     },
     {
       "type": "header",

@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "main": {
+      "type": "static-page",
+      "settings": {
+        "heading": "About Harbour & Field",
+        "content": "<p>Harbour & Field crafts premium menswear that’s surprisingly attainable. We focus on exceptional fabrics, comfortable tailored fits, and thoughtful details designed for daily wear.</p><p>From design to delivery, we keep it simple and honest: quality materials, refined construction, and fair prices.</p><p><strong>Questions?</strong> Reach us at <a href=\"mailto:hello@harbourandfield.com\">hello@harbourandfield.com</a>.</p>"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
+
