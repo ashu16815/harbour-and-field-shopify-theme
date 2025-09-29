@@ -1,0 +1,20 @@
+{
+  "name": "{{ shop.name | escape }}",
+  "short_name": "{{ shop.name | escape }}",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#111111",
+  "icons": [
+    {
+      "src": "{{ settings.favicon | image_url: width: 192, height: 192 }}",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "{{ settings.favicon | image_url: width: 512, height: 512 }}",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
