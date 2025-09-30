@@ -21,6 +21,20 @@
             "menu": "footer"
           }
         },
+        "link_list_VXmhVQ": {
+          "type": "link_list",
+          "settings": {
+            "heading": "<a href=\"/pages/shipping\" target=\"_blank\" title=\"Shipping\">Shipping</a>",
+            "menu": "footer"
+          }
+        },
+        "link_list_g9wkQJ": {
+          "type": "link_list",
+          "settings": {
+            "heading": "<a href=\"/pages/contact\" target=\"_blank\" title=\"Contact Us\">Contact Us</a>",
+            "menu": "footer"
+          }
+        },
         "link_list_xWjzU4": {
           "type": "link_list",
           "settings": {
@@ -31,6 +45,8 @@
       },
       "block_order": [
         "link_list_acRpf7",
+        "link_list_VXmhVQ",
+        "link_list_g9wkQJ",
         "link_list_xWjzU4"
       ],
       "custom_css": [],
