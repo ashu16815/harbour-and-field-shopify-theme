@@ -160,7 +160,7 @@
       "nested_label": "{{ title }} para {{ parent_title }}",
       "view_full_details": "Ver detalhes completos",
       "shipping_policy_html": "<a href=\"{{ link }}\">Envio</a> calculado na finalização da compra.",
-      "choose_options": "Escolher opções",
+      "choose_options": "Comprar agora",
       "choose_product_options": "Escolha opções para {{ product_name }}",
       "value_unavailable": "{{ option_value }} - Indisponível",
       "variant_sold_out_or_unavailable": "Variante esgotada ou indisponível",
