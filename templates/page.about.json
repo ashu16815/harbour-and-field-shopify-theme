@@ -1,24 +1,28 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
-      "type": "static-page",
+      "type": "main-page",
+      "disabled": true,
       "settings": {
-        "heading": "About Harbour & Field",
-        "content": "<p>Harbour & Field crafts premium menswear that’s surprisingly attainable. We focus on exceptional fabrics, comfortable tailored fits, and thoughtful details designed for daily wear.</p><p>From design to delivery, we keep it simple and honest: quality materials, refined construction, and fair prices.</p><p><strong>Questions?</strong> Reach us at <a href=\"mailto:hello@harbourandfield.com\">hello@harbourandfield.com</a>.</p>"
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "content": "<h2>Our Story</h2><p>Harbour &amp; Field was born on the waterfront of Auckland with a simple mission: to craft premium menswear that combines refined style with everyday comfort. We source the finest cotton and linen, work with skilled artisans, and create modern classics built to last. Our pieces are designed for the modern professional who values quality, simplicity, and authenticity.</p><h3>Our Mission</h3><p>We believe in breathable fabrics, ethical sourcing, and timeless designs. Our commitment to quality craftsmanship and responsible manufacturing is at the heart of everything we do.</p><h3>Our Values</h3><ul><li><strong>Quality:</strong> Only premium fabrics and expert tailoring.</li><li><strong>Sustainability:</strong> Long-lasting garments and responsible sourcing.</li><li><strong>Customer Care:</strong> Personalised support via our contact form and FAQ.</li></ul>"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text"
   ]
 }
-

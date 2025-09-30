@@ -22,7 +22,7 @@
         "content": {
           "type": "text",
           "settings": {
-            "text": "<p>Premium Cotton Satin shirts—elegant sheen, breathable comfort, tailored for board-ready confidence.</p>"
+            "text": "<p>Discover our signature cotton satin shirts – breathable, refined, and perfect for boardroom to evening. Learn more about cotton satin <a href=\"/pages/cotton-satin\">here</a>.</p>"
           }
         }
       },
@@ -49,7 +49,7 @@
         "show_rating": false,
         "quick_add": "standard",
         "enable_filtering": true,
-        "filter_type": "drawer",
+        "filter_type": "horizontal",
         "enable_sorting": true,
         "columns_mobile": "2",
         "padding_top": 12,

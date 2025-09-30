@@ -1,24 +1,28 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
-      "type": "static-page",
+      "type": "main-page",
+      "disabled": true,
       "settings": {
-        "heading": "Shipping & Delivery",
-        "content": "<p>We work hard to get your order out as soon as possible. Most orders dispatch quickly; however, please allow up to <strong>10–15 days</strong> for shipping during busy periods or for items requiring additional handling.</p><p><strong>Processing</strong><br>Orders are processed Monday–Friday. You’ll receive a confirmation email once your order is placed and another email with tracking when it ships.</p><p><strong>Shipping methods</strong><br>We use reliable courier partners to deliver your order safely. Shipping costs and estimated delivery times are shown at checkout.</p><p><strong>Delays</strong><br>Weather, carrier constraints, and public holidays can impact timelines. We’ll keep you informed if there are material delays.</p><p><strong>Questions?</strong><br>Contact us at <a href=\"mailto:hello@harbourandfield.com\">hello@harbourandfield.com</a> and we’ll be glad to help.</p>"
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "content": "<h2>Shipping Policy</h2><p>We currently ship across New Zealand. Orders are processed within 2–3 business days. Standard shipping (NZ) takes 3–7 business days. Rural deliveries may take an additional 2–3 days. Shipping fees are calculated at checkout. For more details, please read the full policy.</p><h3>International Orders</h3><p>Please contact us using the <a href=\"/pages/contact\">Contact Us form</a> for international enquiries.</p>"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text"
   ]
 }
-

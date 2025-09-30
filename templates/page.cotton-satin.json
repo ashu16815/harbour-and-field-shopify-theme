@@ -1,75 +1,28 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
-    "cotton_satin_content": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Cotton Satin: Premium Shirts for Board-Ready Wear",
-            "heading_size": "h1"
-          }
-        },
-        "content": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Why Cotton Satin?</h2><p>Harbour &amp; Field Cotton Satin shirts combine natural breathability with a refined satin weave for a smooth hand and subtle sheen—perfect for Auckland’s boardrooms and evenings out.</p><ul><li><strong>Breathable &amp; Cool:</strong> Natural cotton keeps you comfortable in humid weather—unlike synthetic satin.</li><li><strong>Refined Look:</strong> Satin weave delivers a polished, board-ready lustre without glare.</li><li><strong>Soft on Skin:</strong> Long-staple cotton satin feels smooth and luxe all day.</li><li><strong>Durable &amp; Easy Care:</strong> Resists pilling and holds its shape wash after wash.</li><li><strong>Better Choice:</strong> Cotton satin is a more responsible option than polyester satin.</li></ul><h3>Our Cotton Satin Collection</h3><p>Explore our curated range designed for leaders and decision-makers.</p><p><a class=\"btn\" href=\"/collections/cotton-satin\">Shop Cotton Satin Shirts</a></p>"
-          }
-        },
-        "cta_button": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Cotton Satin Collection",
-            "button_link": "shopify://collections/cotton-satin",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": ["heading", "content", "cta_button"],
+    "main": {
+      "type": "main-page",
+      "disabled": true,
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 80,
-        "padding_bottom": 80
+        "padding_top": 28,
+        "padding_bottom": 28
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "rich_text": {
+      "type": "rich-text",
       "settings": {
-        "title": "Cotton Satin Shirts",
-        "heading_size": "h2",
-        "collection": "cotton-satin",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "columns_mobile": "2",
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "accent-1",
-        "image_ratio": "portrait",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "swipe_on_mobile": false,
-        "padding_top": 80,
-        "padding_bottom": 80
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "content": "<h2>Why Cotton Satin?</h2><p>Cotton satin combines the natural breathability of cotton with the smooth lustre of a satin weave. Our long-staple cotton satin shirts deliver unmatched comfort, refined sheen, and durability – perfect for New Zealand's climate.</p><ul><li><strong>Breathable &amp; Cool:</strong> Keeps you comfortable year-round.</li><li><strong>Soft &amp; Luxurious:</strong> A satin weave gives a smooth finish without synthetic fibres.</li><li><strong>Durable &amp; Sustainable:</strong> Long-staple cotton resists pilling and lasts longer than synthetic satin.</li><li><strong>Eco-conscious Choice:</strong> Natural cotton fibres, responsibly sourced.</li></ul><p>Explore our <a href=\"/collections/cotton-satin\">Cotton Satin Collection</a> and experience the difference.</p>"
       }
     }
   },
   "order": [
-    "cotton_satin_content",
-    "featured_collection"
+    "main",
+    "rich_text"
   ]
 }

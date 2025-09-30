@@ -32,9 +32,9 @@
             "button_label_1": "Shop Now",
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_label_2": "Learn about Cotton Satin",
+            "button_link_2": "shopify://pages/cotton-satin",
+            "button_style_secondary_2": true
           }
         }
       },
@@ -114,13 +114,40 @@
         "padding_bottom": 80
       }
     },
+    "cotton_satin_benefits": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why Cotton Satin?",
+            "heading_size": "h2"
+          }
+        },
+        "content": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Breathable. Soft. Refined. Learn more about the benefits of cotton satin and explore our collection.</p><p><a class=\"button\" href=\"/pages/cotton-satin\">Learn More</a></p>"
+          }
+        }
+      },
+      "block_order": ["heading", "content"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "newsletter": {
       "type": "newsletter",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Buy the Premium Cotton Satin Collection first time in NZ",
+            "heading": "Join the Harbour & Field Circle",
             "heading_size": "h2"
           }
         }
@@ -144,6 +171,7 @@
     "hero",
     "featured_collection",
     "featured_collection_2",
+    "cotton_satin_benefits",
     "newsletter",
     "slx_hero"
   ]

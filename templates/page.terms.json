@@ -1,24 +1,28 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
-      "type": "static-page",
+      "type": "main-page",
+      "disabled": true,
       "settings": {
-        "heading": "Terms & Conditions",
-        "content": "<p>By placing an order with Harbour & Field, you agree to the terms below.</p><p><strong>Orders and Acceptance</strong><br>All orders are subject to review and acceptance. Orders may be cancelled prior to shipping if items do not pass quality control, are out of stock, or due to suspected fraud. You will be notified and refunded promptly if this occurs.</p><p><strong>Products and Pricing</strong><br>We aim to describe and price items accurately. In the event of an error, we may correct it and contact you for confirmation before proceeding.</p><p><strong>Returns</strong><br>Returns are accepted within 30 days in original condition. See our Shipping page for details on timelines and process.</p><p><strong>Limitation of Liability</strong><br>To the extent permitted by law, Harbour & Field is not liable for indirect or consequential damages arising from use of the site or products.</p><p><strong>Governing Law</strong><br>These terms are governed by the laws of New Zealand.</p>"
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "content": "<h2>Return &amp; Refund Policy</h2><p>If you are not satisfied with your purchase, you may request a return within 7 days of delivery. Items must be unused, unwashed, and in original condition. Customers are responsible for return shipping. We process refunds within 14 business days of receiving the returned product. See full policy for details.</p><h3>How to Request a Return</h3><p>Submit a request via our <a href=\"/pages/contact\">Contact Us form</a> with your order number and reason. Our team will assess your request and provide return instructions.</p>"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text"
   ]
 }
-
