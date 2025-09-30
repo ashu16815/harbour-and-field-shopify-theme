@@ -506,6 +506,17 @@
   text-decoration: underline;
 }
 
+/* Footer block headings - make them black */
+.footer-block__heading a {
+  color: #000000 !important;
+  text-decoration: none;
+}
+
+.footer-block__heading a:hover {
+  color: #000000 !important;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 749px) {
   .footer-bottom-links {
     justify-content: flex-start;
