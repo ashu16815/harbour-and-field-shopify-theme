@@ -9,393 +9,252 @@
   assign results_url = results.url | default: ''
 -%}
 
-<div class="hf-filters" data-hf-filters>
-  <div class="hf-filters__header">
-    <h3 class="hf-filters__title">Filter by</h3>
-    <button type="button" class="hf-filters__clear" data-clear-filters>
-      Clear all
-    </button>
-  </div>
-
-  <form class="hf-filters__form" id="HFFacetFiltersForm">
+<div class="hf-filters-compact" data-hf-filters>
+  <form class="hf-filters-compact__form" id="HFFacetFiltersForm">
     {%- if results.terms -%}
       <input type="hidden" name="q" value="{{ results.terms | escape }}">
       <input name="options[prefix]" type="hidden" value="last">
     {%- endif -%}
 
-    <div class="hf-filters__sections">
-      
+    <div class="hf-filters-compact__row">
       <!-- Size Filter -->
-      <div class="hf-filters__section">
-        <h4 class="hf-filters__section-title">Size</h4>
-        <div class="hf-filters__options hf-filters__options--size">
+      <div class="hf-filters-compact__group">
+        <label class="hf-filters-compact__label">Size</label>
+        <div class="hf-filters-compact__options">
           {%- assign size_options = 'XS,S,M,L,XL,XXL' | split: ',' -%}
           {%- for size in size_options -%}
-            <label class="hf-filters__option hf-filters__option--size">
+            <label class="hf-filters-compact__option">
               <input 
                 type="checkbox" 
                 name="filter.v.option.size" 
                 value="{{ size | downcase }}"
-                class="hf-filters__checkbox"
+                class="hf-filters-compact__checkbox"
                 data-filter="size"
               >
-              <span class="hf-filters__option-text">{{ size }}</span>
+              <span class="hf-filters-compact__text">{{ size }}</span>
             </label>
           {%- endfor -%}
         </div>
       </div>
 
       <!-- Color Filter -->
-      <div class="hf-filters__section">
-        <h4 class="hf-filters__section-title">Color</h4>
-        <div class="hf-filters__options hf-filters__options--color">
+      <div class="hf-filters-compact__group">
+        <label class="hf-filters-compact__label">Color</label>
+        <div class="hf-filters-compact__options">
           {%- assign color_options = 'White,Black,Navy,Blue,Gray,Green,Red,Beige' | split: ',' -%}
           {%- for color in color_options -%}
-            <label class="hf-filters__option hf-filters__option--color">
+            <label class="hf-filters-compact__option">
               <input 
                 type="checkbox" 
                 name="filter.v.option.color" 
                 value="{{ color | downcase }}"
-                class="hf-filters__checkbox"
+                class="hf-filters-compact__checkbox"
                 data-filter="color"
               >
-              <span class="hf-filters__color-swatch" style="background-color: {{ color | downcase }};"></span>
-              <span class="hf-filters__option-text">{{ color }}</span>
+              <span class="hf-filters-compact__swatch" style="background-color: {{ color | downcase }};"></span>
+              <span class="hf-filters-compact__text">{{ color }}</span>
             </label>
           {%- endfor -%}
         </div>
       </div>
 
       <!-- Fit Filter -->
-      <div class="hf-filters__section">
-        <h4 class="hf-filters__section-title">Fit</h4>
-        <div class="hf-filters__options hf-filters__options--fit">
+      <div class="hf-filters-compact__group">
+        <label class="hf-filters-compact__label">Fit</label>
+        <div class="hf-filters-compact__options">
           {%- assign fit_options = 'Slim,Regular,Relaxed' | split: ',' -%}
           {%- for fit in fit_options -%}
-            <label class="hf-filters__option hf-filters__option--fit">
+            <label class="hf-filters-compact__option">
               <input 
                 type="checkbox" 
                 name="filter.v.option.fit" 
                 value="{{ fit | downcase }}"
-                class="hf-filters__checkbox"
+                class="hf-filters-compact__checkbox"
                 data-filter="fit"
               >
-              <span class="hf-filters__option-text">{{ fit }}</span>
+              <span class="hf-filters-compact__text">{{ fit }}</span>
             </label>
           {%- endfor -%}
         </div>
       </div>
 
       <!-- Price Filter -->
-      <div class="hf-filters__section">
-        <h4 class="hf-filters__section-title">Price</h4>
-        <div class="hf-filters__options hf-filters__options--price">
-          <label class="hf-filters__option hf-filters__option--price">
+      <div class="hf-filters-compact__group">
+        <label class="hf-filters-compact__label">Price</label>
+        <div class="hf-filters-compact__options">
+          <label class="hf-filters-compact__option">
             <input 
               type="checkbox" 
               name="filter.v.price.gte" 
               value="0"
-              class="hf-filters__checkbox"
+              class="hf-filters-compact__checkbox"
               data-filter="price"
             >
-            <span class="hf-filters__option-text">Under $50</span>
+            <span class="hf-filters-compact__text">Under $50</span>
           </label>
-          <label class="hf-filters__option hf-filters__option--price">
+          <label class="hf-filters-compact__option">
             <input 
               type="checkbox" 
               name="filter.v.price.gte" 
               value="5000"
-              class="hf-filters__checkbox"
+              class="hf-filters-compact__checkbox"
               data-filter="price"
             >
-            <span class="hf-filters__option-text">$50 - $100</span>
+            <span class="hf-filters-compact__text">$50-$100</span>
           </label>
-          <label class="hf-filters__option hf-filters__option--price">
+          <label class="hf-filters-compact__option">
             <input 
               type="checkbox" 
               name="filter.v.price.gte" 
               value="10000"
-              class="hf-filters__checkbox"
+              class="hf-filters-compact__checkbox"
               data-filter="price"
             >
-            <span class="hf-filters__option-text">$100+</span>
+            <span class="hf-filters-compact__text">$100+</span>
           </label>
         </div>
       </div>
 
-      <!-- Availability Filter -->
-      <div class="hf-filters__section">
-        <h4 class="hf-filters__section-title">Availability</h4>
-        <div class="hf-filters__options hf-filters__options--availability">
-          <label class="hf-filters__option hf-filters__option--availability">
-            <input 
-              type="checkbox" 
-              name="filter.v.availability" 
-              value="1"
-              class="hf-filters__checkbox"
-              data-filter="availability"
-            >
-            <span class="hf-filters__option-text">In Stock</span>
-          </label>
-          <label class="hf-filters__option hf-filters__option--availability">
-            <input 
-              type="checkbox" 
-              name="filter.v.availability" 
-              value="0"
-              class="hf-filters__checkbox"
-              data-filter="availability"
-            >
-            <span class="hf-filters__option-text">Pre-order</span>
-          </label>
-        </div>
+      <!-- Actions -->
+      <div class="hf-filters-compact__actions">
+        <button type="button" class="hf-filters-compact__clear" data-clear-filters>
+          Clear all
+        </button>
       </div>
-
-    </div>
-
-    <div class="hf-filters__actions">
-      <button type="submit" class="button button--primary hf-filters__apply">
-        Apply Filters
-      </button>
-      <button type="button" class="button button--secondary hf-filters__reset" data-reset-filters>
-        Reset
-      </button>
     </div>
   </form>
 </div>
 
 <style>
-  .hf-filters {
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--glass-border);
-    border-radius: 12px;
-    padding: 1.2rem;
-    margin-bottom: 1rem;
-    box-shadow: var(--glass-shadow-strong);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hf-filters::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--glass-gradient);
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  .hf-filters > * {
-    position: relative;
-    z-index: 2;
-  }
-
-  .hf-filters__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.2rem;
-    padding-bottom: 0.8rem;
-    border-bottom: 1px solid rgba(var(--color-foreground), 0.1);
-  }
-
-  .hf-filters__title {
-    margin: 0;
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: rgb(var(--color-foreground));
-  }
-
-  .hf-filters__clear {
-    background: none;
-    border: none;
-    color: rgb(var(--color-accent-1));
-    font-size: 1.4rem;
-    font-weight: 500;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .hf-filters__clear:hover {
-    opacity: 0.8;
-  }
-
-  .hf-filters__sections {
-    display: grid;
-    gap: 1.2rem;
-  }
-
-  .hf-filters__section {
-    border-bottom: 1px solid rgba(var(--color-foreground), 0.05);
-    padding-bottom: 1rem;
-  }
-
-  .hf-filters__section:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-
-  .hf-filters__section-title {
-    margin: 0 0 0.8rem 0;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: rgb(var(--color-foreground));
-  }
-
-  .hf-filters__options {
-    display: grid;
-    gap: 0.6rem;
-  }
-
-  .hf-filters__options--size {
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-  }
-
-  .hf-filters__options--color {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  }
-
-  .hf-filters__options--fit {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  }
-
-  .hf-filters__options--price,
-  .hf-filters__options--availability {
-    grid-template-columns: 1fr;
-  }
-
-  .hf-filters__option {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.6rem;
+  .hf-filters-compact {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
     border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--glass-border);
-    position: relative;
-    overflow: hidden;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
   }
 
-  .hf-filters__option::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--glass-gradient);
-    pointer-events: none;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  .hf-filters-compact__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-end;
   }
 
-  .hf-filters__option > * {
-    position: relative;
-    z-index: 2;
+  .hf-filters-compact__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 120px;
   }
 
-  .hf-filters__option:hover {
-    background: var(--glass-accent);
-    border-color: rgba(var(--color-accent-1), 0.3);
-    transform: translateY(-2px);
-    box-shadow: var(--glass-shadow);
-  }
-
-  .hf-filters__option:hover::before {
-    opacity: 1;
-  }
-
-  .hf-filters__checkbox {
+  .hf-filters-compact__label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #495057;
     margin: 0;
+  }
+
+  .hf-filters-compact__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .hf-filters-compact__option {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+  }
+
+  .hf-filters-compact__option:hover {
+    background: #f8f9fa;
+    border-color: #007bff;
+  }
+
+  .hf-filters-compact__checkbox:checked + .hf-filters-compact__text {
+    color: #007bff;
+    font-weight: 600;
+  }
+
+  .hf-filters-compact__checkbox:checked ~ .hf-filters-compact__swatch {
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  }
+
+  .hf-filters-compact__checkbox {
+    margin: 0;
+    width: 14px;
+    height: 14px;
+    accent-color: #007bff;
+  }
+
+  .hf-filters-compact__text {
+    font-size: 0.85rem;
+    color: #495057;
+    white-space: nowrap;
+  }
+
+  .hf-filters-compact__swatch {
     width: 16px;
     height: 16px;
-    accent-color: rgb(var(--color-accent-1));
-  }
-
-  .hf-filters__option-text {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: rgb(var(--color-foreground));
-  }
-
-  .hf-filters__color-swatch {
-    width: 20px;
-    height: 20px;
     border-radius: 50%;
-    border: 2px solid rgba(var(--color-foreground), 0.1);
+    border: 2px solid #dee2e6;
     flex-shrink: 0;
   }
 
-  .hf-filters__actions {
+  .hf-filters-compact__actions {
     display: flex;
-    gap: 0.8rem;
-    margin-top: 1.2rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(var(--color-foreground), 0.1);
+    align-items: center;
   }
 
-  .hf-filters__apply,
-  .hf-filters__reset {
-    flex: 1;
-    justify-content: center;
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--glass-border);
-    border-radius: 12px;
-    box-shadow: var(--glass-shadow);
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
+  .hf-filters-compact__clear {
+    background: none;
+    border: none;
+    color: #6c757d;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
   }
 
-  .hf-filters__apply::before,
-  .hf-filters__reset::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--glass-gradient);
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  .hf-filters__apply > *,
-  .hf-filters__reset > * {
-    position: relative;
-    z-index: 2;
-  }
-
-  .hf-filters__apply:hover,
-  .hf-filters__reset:hover {
-    background: var(--glass-accent);
-    border-color: rgba(var(--color-accent-1), 0.3);
-    transform: translateY(-2px);
-    box-shadow: var(--glass-shadow-strong);
+  .hf-filters-compact__clear:hover {
+    background: #f8f9fa;
+    color: #495057;
   }
 
   @media screen and (max-width: 749px) {
-    .hf-filters {
-      padding: 1rem;
+    .hf-filters-compact__row {
+      flex-direction: column;
+      gap: 1rem;
     }
     
-    .hf-filters__options--size {
-      grid-template-columns: repeat(3, 1fr);
+    .hf-filters-compact__group {
+      min-width: auto;
     }
     
-    .hf-filters__options--color {
-      grid-template-columns: repeat(2, 1fr);
+    .hf-filters-compact__options {
+      flex-wrap: wrap;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .hf-filters-compact {
+      padding: 0.8rem;
+    }
+    
+    .hf-filters-compact__option {
+      padding: 0.3rem 0.6rem;
+      font-size: 0.8rem;
     }
   }
 </style>
